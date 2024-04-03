@@ -1,0 +1,35 @@
+.sanpham{
+    width: 101.5%;
+    height: 100%;
+    margin-left: -15px;
+}
+.fa-heart{
+    color: #5e6164;
+}
+#traitim{
+    cursor: pointer;
+}
+#sp-moinhat{
+    margin-left: 5px;
+}
+.themvaogio{
+    background-color: #FF7000;
+}
+#tiltle-sp{
+    font-size: 24px;
+}
+.img-thumbnail{
+    box-shadow: 0 0px 8px rgba(89, 89, 89, 0.5);
+    overflow: hidden;
+}
+.title-product{
+    position: relative;
+    z-index: 1; /* Đặt vị trí của test để nó không bị đè lên bởi ảnh */
+}
+.img-thumbnail img{
+    transition: transform 0.3s ease-in-out;
+}
+.img-thumbnail img:hover{
+    transform: scale(1.1);
+}
+

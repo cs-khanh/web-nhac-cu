@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin sản phẩm</title>
+    <link rel="stylesheet" href="../bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/infoproduct.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../js/infoproduct.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="header">
+          <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-size">
+            <div class="col-md-8">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-headphones"></i> Hỗ trợ 24/7</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> <i class="fas fa-envelope"></i> hellomrkhanhday@gmail.com</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-phone-alt"></i> 0776263552</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../html/login.html"><i class="fas fa-user"></i> Đăng nhập</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="row">
+            <div class="col-md-3">
+              <a class="navbar-brand" href="../html/home.html"><img class="pl-2" src="../img/TrangChu/logo.png" alt="" width="300px"></a>
+            </div>
+            <div class="col-md-2 mt-3">
+              <div class="input-group mt-3">
+                <input type="text" class="form-control" placeholder="Tìm kiếm">
+                <div class="input-group-append">
+                  <button class="btn btn-info" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7 pl-5">
+              <nav class="navbar navbar-expand-sm navbar-light mt-3">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="../html/home.html"  class="nav-link"><i class="fas fa-home"></i> Trang chủ</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown"><i class="fas fa-guitar"></i> Nhạc cụ</a>
+                    <div class="dropdown-menu">
+                      <a href="" class="dropdown-item">Guitar Acoustic</a>
+                      <a href="" class="dropdown-item">Guitar Classic</a>
+                      <a href="" class="dropdown-item">Piano Electric</a>
+                      <a href="" class="dropdown-item">Piano</a>
+                      <a href="" class="dropdown-item">Organ</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link"><i class="fas fa-heart"></i> Yêu thích</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link"><i class="fas fa-user"></i> Tài khoản</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link"><i class="fas fa-envelope"></i> Liên hệ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link"><i class="fas fa-info-circle"></i> Giới thiệu</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <!-- Banner -->
+        <div class="banner">
+          <div class="row">
+            <div class="col-md-4">
+              <h2 class="text-light text-center login">Thông tin sản phẩm</h2>
+            </div>
+            <div class="col-md-8">
+              <ul class="navbar-nav navbar-expand-sm custom-banner" style="width: 700px; margin-left:350px;">
+                <li class="nav-item">
+                  <a href="" class="nav-link home-title">Trang chủ</a>
+                </li>
+                <li class="nav-item text-light mt-2 ml-1">/</li>
+                <li class="nav-item">
+                  <a href="" class="nav-link text-light ml-1"><p id="tensanpham-banner"></p></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- ĐÂY LÀ PHẦN NỘI DUNG  -->
+        <div class="content">
+            <div class="row">
+                <div class="col-md-5 mt-5">
+                    <img class="img-thumbnail anhsanpham" src="../img/SanPham/Guitar/dan-guitar-acoustic-taylor-114ce-grand-auditorium-wbag-hang-trung-bay-viet-music.png" alt="">
+                </div>
+                <div class="col-md-7 mt-5">
+                    <div class="row ml-0 pt-0">
+                        <h2 id="tensanpham">Đàn Guitar Acoustic Taylor 114CE - Grand Auditorium W/Bag</h2>
+                    </div>
+                    <div class="row ml-0">
+                        <h2 class="text-danger pt-4">23.500.000 &#8363;</h2>
+                    </div>
+                    <div class="row ml-0 mt-4">
+                        <div class="col-md-2">
+                            <div class="btn-group">
+                                <button type="button" id="giamsoluong" class="btn">-</button>
+                                <button type="button" id="soluonghientai" class="btn" contenteditable='true'>1</button>
+                                <button type="button" id="tangsoluong" class="btn">+</button>
+                            </div>
+                        </div>
+                        <div class="col-md-5 pr-5">
+                            <button type="button" class="btn btn-block themvaogio btn-info">Thêm vào giỏ</button>
+                        </div>
+                        <div class="col-md-5 pr-5">
+                          <button type="button" class="btn btn-block btn-info">Mua ngay</button>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <p class="pl-4 pr-5">Đàn Guitar Taylor 114CE. Đàn guitar Taylor 114CE kiểu dáng Cut-away Grand Auditorium với diện mạo độc đáo này có mặt sau và hông là gỗ Walnut và mặt trên bằng gỗ Spruce Sitka nguyên tấm (Solid Sitka Spruce), là...</p>
+                        <div class="ml-4 border col-md-11">
+                            <p>
+                                <b>SKU:</b> TAYLOR-6872894341288  
+                            </p>
+                            <p>
+                                <b>Thương Hiệu:</b> <a href="">Taylor</a>
+                            </p>
+                            <p>
+                                <b>Loại Sản Phẩm:</b> <a href="">Đàn Guitar Acoustic</a>
+                            </p>
+                        </div>
+                        <div class="ml-4 border col-md-11 mt-3">
+                            <ul class="mt-3 mb-3">
+                                <li>Bảo hành 12 tháng.</li>
+                                <li>Tặng Bao đàn + Capo + Phím gảy + Ty chỉnh cần.</li>
+                                <li>Giao hàng:
+                                    <ul>
+                                        <li>
+                                            Khu vực TP.HCM và các vùng lân cận: Miễn phí vận chuyển 10km đầu tiên. Giao hàng trong vòng 02 tiếng.
+                                        </li>
+                                        <li>
+                                            Các tỉnh thành khác trên cả nước: Thời gian giao hàng từ 01 đến 03 ngày.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Liên hệ <a href="">ACOUSTIC SHOP</a> ngay để nhận tư vấn và thông tin khuyến mại.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row ml-2 mt-3 mr-0">
+                        <div class="col-md-12 pl-0 pr-3">
+                            <div id="accordion ">
+
+                                <div class="card">
+                                  <div class="card-header border">
+                                    <a class="card-link text-dark font-weight-bold" data-toggle="collapse" href="#collapseOne">
+                                      Mô tả sản phẩm
+                                    </a>
+                                  </div>
+                                  <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <h5>Đàn Guitar Taylor 114CE.</h5>
+                                        <p>Đàn guitar Taylor 114CE kiểu dáng Cut-away Grand Auditorium với diện mạo độc đáo này có mặt sau và hông là gỗ Walnut và mặt trên bằng gỗ Spruce Sitka nguyên tấm (Solid Sitka Spruce), là sự lựa chọn của người chơi acoustic muốn chơi strumming, flatpicking và fingerpicking.
+
+                                        </p>
+                                        <p>
+                                            Với cần đàn Taylor được cấp bằng sáng chế, người chơi dễ dàng tận hưởng khả năng chơi đàn dễ dàng hơn với những ngữ điệu chính xác cùng với cây đàn guitar có chiều rộng là 1-11/16” hẹp hơn một chút giúp bấm hợp âm dễ dàng hơn.
+                                        </p>
+                                        <h6>
+                                            Dáng Grand Auditorium – Hình dáng cây đàn thích hợp cho việc chơi bằng ngón tay (fingerpicking) và phím gảy (strumming).
+                                        </h6>
+                                        <p>
+                                            Chiều dài thân: 20” / Chiều rộng thân: 16” / Chiều sâu thân: 4 5/8”
+                                        </p>
+                                        <ul>
+                                            <li>Một thiết kế của Bob Taylor được giới thiệu vào năm 1994</li>
+                                            <li>Âm thanh rõ với tần âm thấp, tần trung mượt mà và tần cao rõ nét.</li>
+                                        </ul>
+                                        <p>với tỷ lệ nằm giữa dáng Dreadnought và Grand Concert. Trong khi Dreadnought truyền thống có kiểu dáng lớn dành cho người chơi hệ "flatpicker’s" và Grand Concert nhỏ hơn dành cho người chơi hệ “fingerstyle” thì GA được thiết kế để chơi cả hai loại phong cách trên.
+
+                                        </p>
+                                        <p>
+                                            Sitka Spruce – loại gỗ phổ biến nhất để làm mặt đàn guitar, Sitka có dải âm tần rộng và đáp ứng mọi phong cách của người chơi nhạc.
+
+                                        </p>
+                                        <h6>Thân đàn làm bằng gỗ Walnut.</h6>
+                                        <p>
+                                            Thân đàn guitar Taylor 114E làm bằng gỗ Walnut cho âm thanh cực kỳ đặc trưng, cân bằng. Nó mang âm sắc thanh mạnh với tần âm thấp chắc, tần trung mượt mà và tần cao rõ nét.
+                                        </p>
+                                        <h6>
+                                            Venetian Cut-away.
+                                        </h6>
+                                        <p>
+                                            Đường cắt Venetian được biết đến với các đường tròn mềm mại. Điểm cắt sẽ thay đổi tuỳ thuộc vào hình dạng của cây đàn, Grand Concert, Grand Auditorium và Grand Symphony có cong viền lớn hơn, trong khi Dreadnought và Jumbo phẳng hơn một chút. Các model dây nylon Grand Concert có điểm cắt tinh tế và phẳng hơn, các model 100 và 200 series được đánh giá là có đường cong viền phẳng nhất.
+                                        </p>
+                                        <h6>Thiết bị điện tử Expression System® 2.</h6>
+                                        <p>
+                                            Khi nhắc đến Taylor Guitar, chúng ta không thể không kể đến hệ thống Expression Pick-up System được sáng chế độc quyền bởi Taylor. Hệ thống Pick-up này còn được gọi là bộ cảm biến. Nó thu lại toàn bộ dao động một cách chân thật nhất khi chúng ta thể hiện cảm xúc của mình trên Guitar thùng Taylor trước khi đưa ra hệ thống loa ngoài (speaker). Taylor quan điểm rằng, âm thanh phát ra từ Taylor Guitar qua hệ thống Pick-Up đến Speaker sphải là âm thanh trung thực và tự nhiên nhất.
+                                        </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              
+                                <div class="card mt-3">
+                                  <div class="card-header border">
+                                    <a class="collapsed card-link text-dark font-weight-bold" data-toggle="collapse" href="#collapseTwo">
+                                      Thông số kỹ thuật
+                                    </a>
+                                  </div>
+                                  <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Type/Shape: 6-String Grand Auditorium</li>
+                                            <li>Back & Sides: Walnut</li>
+                                            <li>Top: Solid Sitka Spruce</li>
+                                            <li>Soundhole Rosette: Plastic</li>
+                                            <li>Neck: Sapele</li>
+                                            <li>Fretboard: Ebony</li>
+                                            <li>Fretboard Inlay: Pearloid Dots</li>
+                                            <li>Headstock Overlay: Indian Rosewood</li>
+                                            <li>Binding: Black</li>
+                                            <li>Bridge: Ebony</li>
+                                            <li>Nut & Saddle: Tusq</li>
+                                            <li>Tuning Machines: Enclosed, Die-Cast Chrome Plated</li>
+                                            <li>Scale Length: 25 1/2 Inches</li>
+                                            <li>Truss Rod: Adjustable</li>
+                                            <li>Neck Width at Nut: 1 11/16 Inches</li>
+                                            <li>Number of Frets: 20</li>
+                                            <li>Fretboard Radius: 15 Inches</li>
+                                            <li>Bracing: X-Brace</li>
+                                            <li>Finish: Varnish</li>
+                                            <li>Color: Natural</li>
+                                            <li>Cutaway: Venetian</li>
+                                            <li>Electronics: Taylor ES-T</li>
+                                            <li>Body Width: 16 Inches</li>
+                                            <li>Body Depth: 4 5/8 Inches</li>
+                                            <li>Body Length: 20 Inches</li>
+                                            <li>Overall Length: 41 Inches</li>
+                                        </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              
+                                <div class="card mt-3">
+                                  <div class="card-header border">
+                                    <a class="collapsed card-link text-dark font-weight-bold" data-toggle="collapse" href="#collapseThree">
+                                      Lý do nên mua hàng ở ACOUSTIC SHOP
+                                    </a>
+                                  </div>
+                                  <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <h6>Chất Lượng Cao & Giá Phải Chăng.</h6>
+                                        <ul>
+                                            <li>Sản phẩm chất lượng cao. Giá luôn tốt nhất. Kèm nhiều ưu đãi.</li>
+                                            <li>Hàng chính hãng, bảo hành lâu dài.</li>
+                                            <li>Đổi trả trong vòng 07 ngày nếu có lỗi nhà sản xuất.</li>
+                                            <li>Hỗ trợ kỹ thuật trong quá trình sử dụng.</li>
+                                        </ul>
+                                        <h6>Vận Chuyển Nhanh & Thanh Toán Tiện.</h6>
+                                        <ul>
+                                            <li>Giao hàng siêu tốc đối với khu vực TP.HCM và các vùng lân cận.</li>
+                                            <li>Giao hàng nhanh toàn quốc.</li>
+                                            <li>Quý khách được kiểm tra hàng trước khi thanh toán.</li>
+                                            <li>Chấp nhận tất cả các hình thức thanh toán phổ biến: Tiền mặt, Chuyển khoản, Quẹt thẻ, Ví điện tử (Momo, Zalopay, VN Pay...), Thanh toán qua link (Vimo, Payoo...)...</li>
+                                        </ul>
+                                        <h6>Tư Vấn Tận Tâm & Phục Vụ Nhiệt Tình.</h6>
+                                        <ul>
+                                            <li>Đội ngũ nhân viên chuyên nghiệp, nhiệt tình sẵn sàng tư vấn thông tin, giải đáp thắc mắc giúp Quý khách lựa chọn sản phẩm tốt nhất.</li>
+                                        </ul>
+                                        <h6>
+                                            Tặng Kèm Phụ Kiện & Chính Sách Hậu Mãi.
+                                        </h6>
+                                        <ul>
+                                            <li>Hỗ trợ thu lại sản phẩm cũ nếu Khách hàng nâng cấp lên sản phẩm khác tại Việt Music.</li>
+                                            <li>Tặng kèm phụ kiện thiết yếu như: bao đàn, capo, phím gảy, ghế chơi đàn piano...</li>
+                                        </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Đây là aside chung cho  các trang -->
+        <div class="aside">
+          <div class="row mt-5 mb-5">
+            <div class="col-md-3">
+              <a href="" class="nav-link aside-text text-center"><i class="fab fa-facebook"></i> FACEBOOK</a>
+            </div>
+            <div class="col-md-3">
+              <a href="" class="nav-link aside-text text-center"><i class="fab fa-twitter"></i> TWITTER</a>
+            </div>
+            <div class="col-md-3">
+              <a href="" class="nav-link aside-text text-center"><i class="fab fa-google"></i> GOOGLE+</a>
+            </div>
+            <div class="col-md-3">
+              <a href="" class="nav-link aside-text text-center"><i class="fab fa-pinterest"></i> PINTEREST</a>
+            </div>
+          </div>
+        </div>
+        <!-- ĐÂY LÀ PHẦN FOOTER DÙNG CHUNG CHO CÁC TRANG -->
+        <div class="footer bg-dark">
+          <div class="row footer-content">
+            <div class="col-md-4 pl-5 pt-5">
+              <h3 class="text-light pb-3">Giới thiệu</h3>
+              <p class="text-muted pt-2">ACOUSTIC SHOP là một công ty uy tín, chất lượng hàng đầu tại Việt Nam trong lĩnh vực phân phối nhạc cụ.</p>
+              <p class="text-muted">Chúng tôi là nhà phân phối chính thức hầu hết các nhãn hiệu hàng đầu thế gới.</p>
+            </div>
+            <div class="col-md-4 pt-5 text-muted">
+              <h3 class="text-light pb-3">Thông tin liên hệ</h3>
+              <p class="pt-2"><i class="fas fa-map-marker-alt"></i> 12 Nguyễn Văn Bảo, Gò Vấp, Hồ Chí Minh</p>
+              <hr>
+              <p><i class="fas fa-envelope"></i> hellomrkhanhday@gmail.com</p>
+              <hr>
+              <p><i class="fas fa-phone-alt"></i> 0776263552(hiiamkhanh)</p>
+            </div>
+            <div class="col-md-3 pl-2 pt-5">
+              <h3 class="text-light pb-3">Đăng ký theo dõi qua Email</h3>
+              <div class="input-group mb-3 mt-5">
+                <input type="text" class="form-control" placeholder="Hãy nhập Email của bạn">
+                <div class="input-group-append">
+                  <button class="btn btn-info" type="submit">Go</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row text-muted pt-5 pb-3">
+            <div class="col-md-12">
+              <p class="text-center">&#169; 2024 ACOUSTIC SHOP</p>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>

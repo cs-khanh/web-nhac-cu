@@ -1,0 +1,13 @@
+.anhsanpham{
+    position: sticky;
+    z-index: 1000;
+    top: 10px;
+}
+.card{
+    border: none !important;
+}
+#inputValue{
+    border: none;
+    background-color: #F0F0F0;
+    color: black;
+}
