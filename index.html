@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="header">
+          <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-size">
+            <div class="col-md-8">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-headphones"></i> Hỗ trợ 24/7</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> <i class="fas fa-envelope"></i> hellomrkhanhday@gmail.com</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-phone-alt"></i> 0776263552</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="html/login.html"><i class="fas fa-user"></i> Đăng nhập</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="row">
+            <div class="col-md-3">
+              <a class="navbar-brand" href="html/home.html"><img class="pl-2" src="img/TrangChu/logo.png" alt="" width="300px"></a>
+            </div>
+            <div class="col-md-2 mt-3">
+              <div class="input-group mt-3">
+                <input type="text" class="form-control" placeholder="Tìm kiếm">
+                <div class="input-group-append">
+                  <button class="btn btn-info" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7 pl-5">
+              <nav class="navbar navbar-expand-sm navbar-light mt-3">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="html/home.html"  class="nav-link"><i class="fas fa-home"></i> Trang chủ</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown"><i class="fas fa-guitar"></i> Nhạc cụ</a>
+                    <div class="dropdown-menu">
+                      <a href="" class="dropdown-item">Guitar Acoustic</a>
+                      <a href="" class="dropdown-item">Guitar Classic</a>
+                      <a href="" class="dropdown-item">Piano Electric</a>
+                      <a href="" class="dropdown-item">Piano</a>
+                      <a href="" class="dropdown-item">Organ</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link"><i class="fas fa-heart"></i> Yêu thích</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link"><i class="fas fa-user"></i> Tài khoản</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link"><i class="fas fa-envelope"></i> Liên hệ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link"><i class="fas fa-info-circle"></i> Giới thiệu</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        
+        <!-- ĐÂY LÀ PHẦN NỘI DUNG  -->
+        <div class="content ml-3">
+            <div class="row">
+                <div class="col-md-4 bg-dark d-flex justify-content-center">
+                      <div class="col-md-7">
+                        <p class="text-center text-light mt-5" id="tiltle-sp">Sản phẩm mới nhất</p>
+                      <div class="img-thumbnail col-md-12">
+                        <img class="col-md-12 text-center" src="img/TrangChu/taylor110e.jpg" alt="" width="100%">
+                        <div class="col-md-12 text-center">
+                          <p id="traitim" class="mb-0"><i class="far fa-heart" id="yeuthich"></i></p>
+                        </div>
+                        <script>
+                          document.getElementById("traitim").addEventListener("click", function() {
+                              var heartIcon = this.querySelector("i");
+                              heartIcon.classList.toggle("fas");
+                              heartIcon.classList.toggle("far"); 
+                              heartIcon.classList.toggle("text-secondary"); 
+                          });
+                        </script>
+                        <a class="nav-link pt-0 text-center text-info" href="">Guitar Taylor 110E</a>
+                        <p class="text-center font-weight-bold">23.000.000</p>
+                        <div class="col-md-12 text-center">
+                          <button class="btn text-light themvaogio mb-3" type="button">Thêm vào giỏ</button>
+                        </div>
+                      </div>
+                      </div>
+                </div>
+                <div class="col-md-8">
+                  <img class="sanpham pl-0 pr-0" src="img/TrangChu/ngoidan.jpeg" alt="" width="100%">
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h3 class="text-center mt-4 text-info">Sản phẩm nổi bật</h3>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-4 pl-0 pr-0">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                  <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                  </ul>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/TrangChu/kieudang2.jpg" alt="" width="100%">
+                      <div class="carousel-caption mb-3">
+                        <h3 class="text-info">Guitar</h3>
+                        <p>Kiểu dáng hiện đại</p>
+                      </div>   
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/TrangChu/kiedang3.jpg" alt="" width="100%" >
+                      <div class="carousel-caption mb-3">
+                        <h3 class="text-info">Guitar</h3>
+                        <p>Phong cách sang trọng</p>
+                      </div>   
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/TrangChu/kieudang1.jpg" alt="" width="100%">
+                      <div class="carousel-caption mb-3">
+                        <h3 class="text-info">Guitar</h3>
+                        <p>Âm thanh sắc nét</p>
+                      </div>   
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </a>
+                  <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="col-md-4 d-flex justify-content-center align-items-center float-left thumbnail-shadow">
+                  <div class="img-thumbnail col-md-12">
+                    <a href="html/infoproduct.html"><img class="col-md-12" src="img/SanPham/Guitar/dan-guitar-acoustic-taylor-114ce-grand-auditorium-wbag-hang-trung-bay-viet-music.png" alt="" ></a>
+                    <div class="title-product">
+                      <a class="nav-link pt-0 text-center text-info" href="html/infoproduct.html">Guitar Taylor 114CE</a>
+                      <p class="text-center font-weight-bold">23.500.000</p>
+                    </div>
+                    <div class="col-md-12 text-center">
+                      <button class="btn text-light themvaogio mb-3" type="button">Thêm vào giỏ</button>
+                    </div>
+                  </div>  
+                </div>
+                <div class="col-md-4 d-flex justify-content-center align-items-center  float-left">
+                  <div class="img-thumbnail col-md-12">
+                    <a href=""><img class="col-md-12 " src="img/SanPham/Guitar/dan-guitar-acoustic-taylor-bt1-baby-taylor-wbag-viet-music.png" alt="" ></a>
+                    <div class="title-product">
+                      <a class="nav-link pt-0 text-center text-info" href="">Guitar Taylor BT1</a>
+                      <p class="text-center font-weight-bold">10.300.000</p>
+                    </div>
+                    <div class="col-md-12 text-center">
+                      <button class="btn text-light themvaogio mb-3" type="button">Thêm vào giỏ</button>
+                    </div>
+                  </div>  
+                </div>
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                  <div class="img-thumbnail col-md-12">
+                    <a href=""><img class="col-md-12 " src="img/SanPham/Guitar/dan-guitar-acoustic-taylor-bt2-mahogany-baby-taylor-wbag-viet-music.png" alt="" ></a>
+                    <div class="title-product">
+                      <a class="nav-link pt-0 text-center text-info" href="">Guitar Taylor BT2</a>
+                      <p class="text-center font-weight-bold">11.700.000</p>
+                    </div>
+                    <div class="col-md-12 text-center">
+                      <button class="btn text-light themvaogio mb-3" type="button">Thêm vào giỏ</button>
+                    </div>
+                  </div>  
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-4 pr-0 pl-0">
+                <div class="carousel-item active">
+                  <img src="img/TrangChu/piano.jpg" alt="" width="100%">
+                  <div class="carousel-caption mb-3">
+                    <h3 class="text-info">Piano - Organ</h3>
+                    <p>Âm thanh ấn tượng</p>
+                  </div>   
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="col-md-4 d-flex justify-content-center align-items-center float-left">
+                  <div class="img-thumbnail col-md-12">
+                    <a href=""><img class="col-md-12 " src="img/SanPham/Piano/dan-piano-dien-yamaha-clp-300-clavinova-qua-su-dung-viet-music.png" alt="" ></a>
+                    <div class="title-product">
+                      <a class="nav-link pt-0 text-center text-info" href="">Piano Yamaha CLP 300</a>
+                      <p class="text-center font-weight-bold">6.000.000</p>
+                    </div>
+                    <div class="col-md-12 text-center">
+                      <button class="btn text-light themvaogio mb-3" type="button">Thêm vào giỏ</button>
+                    </div>
+                  </div>  
+                </div>
+                <div class="col-md-4 d-flex justify-content-center align-items-center float-left">
+                  <div class="img-thumbnail col-md-12">
+                    <a href=""><img class="col-md-12 " src="img/SanPham/Piano/dan-piano-dien-yamaha-cvp-8-clavinova-qua-su-dung-viet-music.png" alt="" ></a>
+                    <div class="title-product">
+                      <a class="nav-link pt-0 text-center text-info" href="">Piano Yamaha CVP 8</a>
+                      <p class="text-center font-weight-bold">5.000.000</p>
+                    </div>
+                    <div class="col-md-12 text-center">
+                      <button class="btn text-light themvaogio mb-3" type="button">Thêm vào giỏ</button>
+                    </div>
+                  </div>  
+                </div>
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                  <div class="img-thumbnail col-md-12">
+                    <a href=""><img class="col-md-12 " src="img/SanPham/Piano/dan-piano-dien-yamaha-p-95-p-series-qua-su-dung-viet-music.png" alt="" ></a>
+                    <div class="title-product">
+                      <a class="nav-link pt-0 text-center text-info" href="">Piano Yamaha P 95</a>
+                      <p class="text-center font-weight-bold">9.500.000</p>
+                    </div>
+                    <div class="col-md-12 text-center">
+                      <button class="btn text-light themvaogio mb-3" type="button">Thêm vào giỏ</button>
+                    </div>
+                  </div>  
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- Đây là aside chung cho  các trang -->
+        <div class="aside">
+          <div class="row mt-5 mb-5">
+            <div class="col-md-3">
+              <a href="" class="nav-link aside-text text-center"><i class="fab fa-facebook"></i> FACEBOOK</a>
+            </div>
+            <div class="col-md-3">
+              <a href="" class="nav-link aside-text text-center"><i class="fab fa-twitter"></i> TWITTER</a>
+            </div>
+            <div class="col-md-3">
+              <a href="" class="nav-link aside-text text-center"><i class="fab fa-google"></i> GOOGLE+</a>
+            </div>
+            <div class="col-md-3">
+              <a href="" class="nav-link aside-text text-center"><i class="fab fa-pinterest"></i> PINTEREST</a>
+            </div>
+          </div>
+        </div>
+        <!-- ĐÂY LÀ PHẦN FOOTER DÙNG CHUNG CHO CÁC TRANG -->
+        <div class="footer bg-dark">
+          <div class="row footer-content">
+            <div class="col-md-4 pl-5 pt-5">
+              <h3 class="text-light pb-3">Giới thiệu</h3>
+              <p class="text-muted pt-2">ACOUSTIC SHOP là một công ty uy tín, chất lượng hàng đầu tại Việt Nam trong lĩnh vực phân phối nhạc cụ.</p>
+              <p class="text-muted">Chúng tôi là nhà phân phối chính thức hầu hết các nhãn hiệu hàng đầu thế gới.</p>
+            </div>
+            <div class="col-md-4 pt-5 text-muted">
+              <h3 class="text-light pb-3">Thông tin liên hệ</h3>
+              <p class="pt-2"><i class="fas fa-map-marker-alt"></i> 12 Nguyễn Văn Bảo, Gò Vấp, Hồ Chí Minh</p>
+              <hr>
+              <p><i class="fas fa-envelope"></i> hellomrkhanhday@gmail.com</p>
+              <hr>
+              <p><i class="fas fa-phone-alt"></i> 0776263552(hiiamkhanh)</p>
+            </div>
+            <div class="col-md-3 pl-2 pt-5">
+              <h3 class="text-light pb-3">Đăng ký theo dõi qua Email</h3>
+              <div class="input-group mb-3 mt-5">
+                <input type="text" class="form-control" placeholder="Hãy nhập Email của bạn">
+                <div class="input-group-append">
+                  <button class="btn btn-info" type="submit">Go</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row text-muted pt-5 pb-3">
+            <div class="col-md-12">
+              <p class="text-center">&#169; 2024 ACOUSTIC SHOP</p>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
