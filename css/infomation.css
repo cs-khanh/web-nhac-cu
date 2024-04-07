@@ -1,0 +1,16 @@
+.content{
+    box-sizing: border-box;
+    margin:0 auto ;
+    padding:0 auto;
+    width: 85%;
+}
+.table{
+    width: 600px;
+}
+.chondetai{
+    margin-left: 1%;
+    margin-top: 1%;
+}
+.chondetai p{
+    text-align: justify;
+}

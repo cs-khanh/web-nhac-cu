@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý tài khoản</title>
+    <link rel="stylesheet" href="../bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../js/accountmanager.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="header">
+          <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-size">
+            <div class="col-md-8">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-headphones"></i> Hỗ trợ 24/7</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> <i class="fas fa-envelope"></i> hellomrkhanhday@gmail.com</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-phone-alt"></i> 0776263552</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../html/home.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="row">
+            <div class="col-md-3">
+              <a class="navbar-brand" href="../html/home.html"><img class="pl-2" src="../img/TrangChu/logo.png" alt="" width="300px"></a>
+            </div>
+            <div class="col-md-2 mt-3">
+              <div class="input-group mt-3">
+                <input type="text" class="form-control" placeholder="Tìm kiếm">
+                <div class="input-group-append">
+                  <button class="btn btn-info" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7 pl-5">
+              <nav class="navbar navbar-expand-sm navbar-light mt-3">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="../html/home.html" class="nav-link"><i class="fas fa-home"></i> Trang chủ</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown"><i class="fas fa-guitar"></i> Nhạc cụ</a>
+                    <div class="dropdown-menu">
+                      <a href="" class="dropdown-item">Guitar Acoustic</a>
+                      <a href="" class="dropdown-item">Guitar Classic</a>
+                      <a href="" class="dropdown-item">Piano Electric</a>
+                      <a href="" class="dropdown-item">Piano</a>
+                      <a href="" class="dropdown-item">Organ</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link"><i class="fas fa-heart"></i> Yêu thích</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../html/accountmanagement.html" class="nav-link"><i class="fas fa-user"></i> Tài khoản</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../html/contact.html" class="nav-link"><i class="fas fa-envelope"></i> Liên hệ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../html/infomation.html" class="nav-link"><i class="fas fa-info-circle"></i> Giới thiệu</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="banner">
+          <div class="row">
+            <div class="col-md-4">
+              <h2 class="text-light text-center login">QUẢN LÝ TÀI KHOẢN</h2>
+            </div>
+            <div class="col-md-8">
+              <ul class="navbar-nav navbar-expand-sm custom-banner">
+                <li class="nav-item">
+                  <a href="" class="nav-link home-title">Trang chủ</a>
+                </li>
+                <li class="nav-item text-light mt-2 ml-1">/</li>
+                <li class="nav-item">
+                  <a href="" class="nav-link text-light ml-1">Quản lý tài khoản</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- ĐÂY LÀ PHẦN NỘI DUNG  -->
+        <div class="content">
+            <div class="row ml-0 mr-0">
+                <h5 class="pt-3">Xin chào <span class="text-success showUsername">user12345</span> ! </h5>
+                <h5 class="pt-3"> (Không phải <span class="text-success showUsername">user12345</span><a class="" href="../html/home.html"> Đăng xuất</a>) </h5>
+            </div>
+          <div class="row ml-0 mr-0 mt-5">
+            <ul class="nav nav-pills ml-3">
+                <li class="nav-item"><a href="#detailaccount" class="nav-link" data-toggle="pill">Chi tiết tài khoản</a></li>
+                <li class="nav-item"><a href="#updateinfo" class="nav-link" data-toggle="pill">Cập nhật thông tin</a></li>
+                <li class="nav-item"><a href="#changepassword" class="nav-link" data-toggle="pill">Thay đổi mật khẩu</a></li>
+                <li class="nav-item"><a href="#purchasehistory" class="nav-link active" data-toggle="pill">Lịch sử mua hàng</a></li>
+            </ul>
+          </div>
+          <div class="tab-content col-6 mt-3 ml-3">
+            <div class="tab-pane show fade" id="detailaccount">
+                <form action="">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="">Tên đăng nhập</label>
+                            </div>
+                            <div class="col-6">
+                                <input class="form-control" type="text" name="" id="usernameedit" value="user12345" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="">Email</label>
+                            </div>
+                            <div class="col-6">
+                                <input class="form-control" type="email" name="" id="emailedit" value="abc@gmail.com" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="sdt">Số điện thoại</label>
+                            </div>
+                            <div class="col-6">
+                                <input class="form-control" type="tel" name="" id="sdtedit" value="0333456999" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="address">Địa chỉ</label>
+                            </div>
+                            <div class="col-6">
+                                <input class="form-control" type="text" name="" id="addressedit" value="" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane show fade" id="updateinfo">
+                <form action="">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="username">Tên đăng nhập</label>
+                            </div>
+                            <div class="col-6">
+                                <input class="form-control" type="text" name="" id="username" value="user12345">
+                                <span class="text-danger" id="tbUsername">*</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="col-6">
+                                <input class="form-control" type="email" name="" id="email" value="abc@gmail.com">
+                                <span class="text-danger" id="tbEmail">*</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="sdt">Số điện thoại</label>
+                            </div>
+                            <div class="col-6">
+                                <input class="form-control" type="tel" name="" id="sdt" value="0333456999">
+                                <span class="text-danger" id="tbSdt">*</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="address">Địa chỉ</label>
+                            </div>
+                            <div class="col-6">
+                                <input class="form-control" type="text" name="" id="address">
+                                <span class="text-danger" id="tbAddress">*</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"></div>
+                        <div class="col-6">
+                            <button class="btn btn-info" type="button" id="changeInfo">Cập nhật thông tin</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane show fade" id="changepassword">
+                <form action="">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="pwPresent">Mật khẩu hiện tại</label>
+                            </div>
+                            <div class="col-6">
+                                <input class="form-control" type="password" name="" id="pwPresent">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="pwNew">Mật khẩu mới</label>
+                            </div>
+                            <div class="col-6">
+                                <input class="form-control" type="password" name="" id="pwNew">
+                                <span class="text-danger" id="tbPwNew">*</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="pwNewRe">Nhập lại mật khẩu</label>
+                            </div>
+                            <div class="col-6">
+                                <input class="form-control" type="password" name="" id="pwNewRe">
+                                <span class="text-danger" id="tbPwNewRe">*</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"></div>
+                        <div class="col-6">
+                            <button class="btn btn-info" type="button" id="changepw">Thay đổi mật khẩu</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane show fade active" id="purchasehistory">
+                <table class="table table-bordered table-hover">
+                  <thead>
+                    <th>STT</th>
+                    <th>Mã hóa đơn</th>
+                    <th>Tổng hóa đơn</th>
+                    <th>Thanh toán</th>
+                    <th>Địa chỉ</th>
+                    <th>Ngày mua</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>22312342132</td>
+                      <td>23.500.000 VNĐ</td>
+                      <td>Bank</td>
+                      <td>Quảng Bình</td>
+                      <td>2024-05-05 12:00:00</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>22345672132</td>
+                      <td>10.500.000 VNĐ</td>
+                      <td>Bank</td>
+                      <td>Hồ Chí Minh</td>
+                      <td>2024-05-06 12:00:00</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+        <!-- Đây là aside chung cho  các trang -->
+        <div class="aside">
+          <div class="row mt-5 mb-5">
+            <div class="col-md-3">
+              <a href="" class="nav-link aside-text text-center"><i class="fab fa-facebook"></i> FACEBOOK</a>
+            </div>
+            <div class="col-md-3">
+              <a href="" class="nav-link aside-text text-center"><i class="fab fa-twitter"></i> TWITTER</a>
+            </div>
+            <div class="col-md-3">
+              <a href="" class="nav-link aside-text text-center"><i class="fab fa-google"></i> GOOGLE+</a>
+            </div>
+            <div class="col-md-3">
+              <a href="" class="nav-link aside-text text-center"><i class="fab fa-pinterest"></i> PINTEREST</a>
+            </div>
+          </div>
+        </div>
+        <!-- ĐÂY LÀ PHẦN FOOTER DÙNG CHUNG CHO CÁC TRANG -->
+        <div class="footer bg-dark">
+          <div class="row footer-content">
+            <div class="col-md-4 pl-5 pt-5">
+              <h3 class="text-light pb-3">Giới thiệu</h3>
+              <p class="text-muted pt-2">ACOUSTIC SHOP là một công ty uy tín, chất lượng hàng đầu tại Việt Nam trong lĩnh vực phân phối nhạc cụ.</p>
+              <p class="text-muted">Chúng tôi là nhà phân phối chính thức hầu hết các nhãn hiệu hàng đầu thế gới.</p>
+            </div>
+            <div class="col-md-4 pt-5 text-muted">
+              <h3 class="text-light pb-3">Thông tin liên hệ</h3>
+              <p class="pt-2"><i class="fas fa-map-marker-alt"></i> 12 Nguyễn Văn Bảo, Gò Vấp, Hồ Chí Minh</p>
+              <hr>
+              <p><i class="fas fa-envelope"></i> hellomrkhanhday@gmail.com</p>
+              <hr>
+              <p><i class="fas fa-phone-alt"></i> 0776263552(hiiamkhanh)</p>
+            </div>
+            <div class="col-md-3 pl-2 pt-5">
+              <h3 class="text-light pb-3">Đăng ký theo dõi qua Email</h3>
+              <div class="input-group mb-3 mt-5">
+                <input type="text" class="form-control" placeholder="Hãy nhập Email của bạn">
+                <div class="input-group-append">
+                  <button class="btn btn-info" type="submit">Go</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row text-muted pt-5 pb-3">
+            <div class="col-md-12">
+              <p class="text-center">&#169; 2024 ACOUSTIC SHOP</p>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
