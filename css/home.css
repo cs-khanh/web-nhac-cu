@@ -1,16 +1,9 @@
-.sanpham{
-    width: 101.5%;
-    height: 100%;
-    margin-left: -15px;
-}
 .fa-heart{
     color: #5e6164;
 }
-#traitim{
+.traitim{
     cursor: pointer;
-}
-#sp-moinhat{
-    margin-left: 5px;
+    font-size: 20px;
 }
 .themvaogio{
     background-color: #FF7000;
@@ -32,4 +25,10 @@
 .img-thumbnail img:hover{
     transform: scale(1.1);
 }
-
+.carousel-indicators li {
+    border-radius: 50%;
+    border: 1px solid #FFF;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+}

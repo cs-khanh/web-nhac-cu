@@ -15,7 +15,7 @@
 <body>
     <div class="container-fluid">
         <div class="header">
-          <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-size">
+          <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <div class="col-md-8">
               <ul class="navbar-nav">
                 <li class="nav-item">
@@ -38,10 +38,10 @@
             </div>
           </nav>
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6">
               <a class="navbar-brand" href="../html/home.html"><img class="pl-2" src="../img/TrangChu/logo.png" alt="" width="300px"></a>
             </div>
-            <div class="col-md-2 mt-3">
+            <div class="col-md-2 col-sm-6 mt-3">
               <div class="input-group mt-3">
                 <input type="text" class="form-control" placeholder="Tìm kiếm">
                 <div class="input-group-append">
@@ -88,19 +88,13 @@
         <!-- Banner -->
         <div class="banner">
           <div class="row">
-            <div class="col-md-4">
-              <h2 class="text-light text-center login">ĐĂNG KÝ</h2>
+            <div class="col-md-6 pl-5 content-banner1">
+              <h2 class="text-light">ĐĂNG KÝ</h2>
             </div>
-            <div class="col-md-8">
-              <ul class="navbar-nav navbar-expand-sm custom-banner">
-                <li class="nav-item">
-                  <a href="" class="nav-link home-title">Trang chủ</a>
-                </li>
-                <li class="nav-item text-light mt-2 ml-1">/</li>
-                <li class="nav-item">
-                  <a href="" class="nav-link text-light ml-1">Đăng ký</a>
-                </li>
-              </ul>
+            <div class="col-md-6 pl-5 content-banner2">
+              <a href="../html/home.html" class="home-title">Trang chủ </a>
+              <span class="text-light ml-1"> /</span>
+              <a href="" class="text-light ml-1">Đăng ký</a>
             </div>
           </div>
         </div>
@@ -173,7 +167,7 @@
               <div class="col-md-5 float-left">
                 <button id="dky" type="button" class="btn btn-info btn-block">Đăng Ký</button>
                 <p>Bạn đã có tài khoản ?</p>
-                <button id="dn" type="button" class="btn btn-info btn-block">Đăng nhập</button>
+                <a href="../html/login.html"><button id="dn" type="button" class="btn btn-info btn-block">Đăng nhập</button></a>
               </div>
             </form>
           </div>
@@ -198,12 +192,12 @@
         <!-- ĐÂY LÀ PHẦN FOOTER DÙNG CHUNG CHO CÁC TRANG -->
         <div class="footer bg-dark">
           <div class="row footer-content">
-            <div class="col-md-4 pl-5 pt-5">
+            <div class="col-md-4 col-sm-12 col-12 pt-5">
               <h3 class="text-light pb-3">Giới thiệu</h3>
-              <p class="text-muted pt-2">ACOUSTIC SHOP là một công ty uy tín, chất lượng hàng đầu tại Việt Nam trong lĩnh vực phân phối nhạc cụ.</p>
-              <p class="text-muted">Chúng tôi là nhà phân phối chính thức hầu hết các nhãn hiệu hàng đầu thế gới.</p>
+              <p class="text-muted pt-2 pr-5">ACOUSTIC SHOP là một công ty uy tín, chất lượng hàng đầu tại Việt Nam trong lĩnh vực phân phối nhạc cụ.</p>
+              <p class="text-muted pr-5">Chúng tôi là nhà phân phối chính thức hầu hết các nhãn hiệu hàng đầu thế gới.</p>
             </div>
-            <div class="col-md-4 pt-5 text-muted">
+            <div class="col-md-4 col-sm-12 col-12 pt-5 text-muted pr-5">
               <h3 class="text-light pb-3">Thông tin liên hệ</h3>
               <p class="pt-2"><i class="fas fa-map-marker-alt"></i> 12 Nguyễn Văn Bảo, Gò Vấp, Hồ Chí Minh</p>
               <hr>
@@ -211,9 +205,9 @@
               <hr>
               <p><i class="fas fa-phone-alt"></i> 0776263552(hiiamkhanh)</p>
             </div>
-            <div class="col-md-3 pl-2 pt-5">
+            <div class="col-md-4 col-sm-12 col-12 pl-2 pt-5 pr-5">
               <h3 class="text-light pb-3">Đăng ký theo dõi qua Email</h3>
-              <div class="input-group mb-3 mt-5">
+              <div class="input-group mb-3 mt-5 mr-2">
                 <input type="text" class="form-control" placeholder="Hãy nhập Email của bạn">
                 <div class="input-group-append">
                   <button class="btn btn-info" type="submit">Go</button>
@@ -222,7 +216,7 @@
             </div>
           </div>
           <div class="row text-muted pt-5 pb-3">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-12">
               <p class="text-center">&#169; 2024 ACOUSTIC SHOP</p>
             </div>
           </div>
