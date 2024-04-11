@@ -10,13 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        $('.yeuthich').click(function(){ 
-          $(this).toggleClass('fas');
-        })
-      })
-    </script>
+    <script src="../js/addcart.js"></script>
+    <script src="../js/addfavorite.js"></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -72,10 +67,10 @@
                     </div>
                   </li>
                   <li class="nav-item">
-                    <a href="" class="nav-link"><i class="fas fa-heart"></i> Yêu thích</a>
+                    <a href="../html/favoriteproduct.html" class="nav-link"><i class="fas fa-heart"></i> Yêu thích</a>
                   </li>
                   <li class="nav-item">
-                    <a href="" class="nav-link"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a>
+                    <a href="../html/shoppingcart.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a>
                   </li>
                   <li class="nav-item">
                     <a href="../html/accountmanagement.html" class="nav-link"><i class="fas fa-user"></i> Tài khoản</a>
@@ -100,16 +95,16 @@
                       <p class="text-center text-light mt-5" id="tiltle-sp">Sản phẩm mới nhất</p>
                     <div class="img-thumbnail col-md-12 mb-5 mt-5">
                       <div class="row">
-                        <img class="col-md-12 col-sm-12 pt-2" src="../img/TrangChu/taylor-110e1.jpg" alt="" width="100%">
+                        <img class="col-md-12 col-sm-12 pt-2" src="../img/TrangChu/guitarTaylor-110e.webp" alt="" width="100%">
                       </div>
                       <a class="nav-link pt-0 text-center text-info title-product" href="">Guitar Taylor 110E</a>
                       <p class="text-center font-weight-bold">23.000.000</p>
                       <div class="row">
                         <div class="col-md-10">
-                          <button class="btn btn-block text-light themvaogio mb-3" type="button">Thêm vào giỏ</button>
+                          <button class="btn btn-block text-light themvaogio mb-3" data-id="1" type="button">Thêm vào giỏ</button>
                         </div>
                         <div class="col-md-2 pl-0 pt-1 text-center">
-                          <span class="traitim" class="ml-0"><i class="far fa-heart yeuthich"></i></span>
+                          <span class="traitim" class="ml-0"><i class="far fa-heart yeuthich" data-yeuthich="1"></i></span>
                         </div>
                       </div>
                     </div>
@@ -196,10 +191,10 @@
                     </div>
                     <div class="row">
                       <div class="col-md-10">
-                        <button class="btn btn-block text-light themvaogio mb-3" type="button">Thêm vào giỏ</button>
+                        <button class="btn btn-block text-light themvaogio mb-3" data-id="2" type="button">Thêm vào giỏ</button>
                       </div>
                       <div class="col-md-2 pl-0 pt-1 text-center">
-                        <span class="traitim" class="ml-0"><i class="far fa-heart yeuthich"></i></span>
+                        <span class="traitim" class="ml-0"><i class="far fa-heart yeuthich" data-yeuthich="2"></i></span>
                       </div>
                     </div>
                   </div>  
@@ -213,10 +208,10 @@
                     </div>
                     <div class="row">
                       <div class="col-md-10">
-                        <button class="btn btn-block text-light themvaogio mb-3" type="button">Thêm vào giỏ</button>
+                        <button class="btn btn-block text-light themvaogio mb-3" data-id="3" type="button">Thêm vào giỏ</button>
                       </div>
                       <div class="col-md-2 pl-0 pt-1 text-center">
-                        <span class="traitim" class="ml-0"><i class="far fa-heart yeuthich"></i></span>
+                        <span class="traitim" class="ml-0"><i class="far fa-heart yeuthich" data-yeuthich="3"></i></span>
                       </div>
                     </div>
                   </div>  
@@ -230,10 +225,10 @@
                     </div>
                     <div class="row">
                       <div class="col-md-10">
-                        <button class="btn btn-block text-light themvaogio mb-3" type="button">Thêm vào giỏ</button>
+                        <button class="btn btn-block text-light themvaogio mb-3" data-id="4" type="button">Thêm vào giỏ</button>
                       </div>
                       <div class="col-md-2 pl-0 pt-1 text-center">
-                        <span class="traitim" class="ml-0"><i class="far fa-heart yeuthich"></i></span>
+                        <span class="traitim" class="ml-0"><i class="far fa-heart yeuthich" data-yeuthich="4"></i></span>
                       </div>
                     </div>
                   </div>  
@@ -260,10 +255,10 @@
                     </div>
                     <div class="row">
                       <div class="col-md-10">
-                        <button class="btn btn-block text-light themvaogio mb-3" type="button">Thêm vào giỏ</button>
+                        <button class="btn btn-block text-light themvaogio mb-3" data-id="5" type="button">Thêm vào giỏ</button>
                       </div>
                       <div class="col-md-2 pl-0 pt-1 text-center">
-                        <span class="traitim" class="ml-0"><i class="far fa-heart yeuthich"></i></span>
+                        <span class="traitim" class="ml-0"><i class="far fa-heart yeuthich" data-yeuthich="5"></i></span>
                       </div>
                     </div>
                   </div>  
@@ -277,10 +272,10 @@
                     </div>
                     <div class="row">
                       <div class="col-md-10">
-                        <button class="btn btn-block text-light themvaogio mb-3" type="button">Thêm vào giỏ</button>
+                        <button class="btn btn-block text-light themvaogio mb-3" data-id="6" type="button">Thêm vào giỏ</button>
                       </div>
                       <div class="col-md-2 pl-0 pt-1 text-center">
-                        <span class="traitim" class="ml-0"><i class="far fa-heart yeuthich"></i></span>
+                        <span class="traitim" class="ml-0"><i class="far fa-heart yeuthich" data-yeuthich="6"></i></span>
                       </div>
                     </div>
                   </div>  
@@ -294,10 +289,10 @@
                     </div>
                     <div class="row">
                       <div class="col-md-10">
-                        <button class="btn btn-block text-light themvaogio mb-3" type="button">Thêm vào giỏ</button>
+                        <button class="btn btn-block text-light themvaogio mb-3" data-id="7" type="button">Thêm vào giỏ</button>
                       </div>
                       <div class="col-md-2 pl-0 pt-1 text-center">
-                        <span class="traitim" class="ml-0"><i class="far fa-heart yeuthich"></i></span>
+                        <span class="traitim" class="ml-0"><i class="far fa-heart yeuthich" data-yeuthich="7"></i></span>
                       </div>
                     </div>
                   </div>  
