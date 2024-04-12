@@ -11,6 +11,8 @@
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
     <script src="../js/infoproduct.js"></script>
+    <script src="../js/addfavorite.js"></script>
+    <script src="../js/addcart.js"></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -110,7 +112,7 @@
                         <h2 id="tensanpham">Đàn Guitar Acoustic Taylor 114CE - Grand Auditorium W/Bag</h2>
                     </div>
                     <div class="row ml-0">
-                        <h2 class="text-danger pt-4">23.500.000 &#8363;</h2>
+                        <h2 class="text-danger pt-4" id="gia">23.500.000 &#8363;</h2>
                     </div>
                     <div class="row ml-0">
                         <div class="col-md-2 mt-4">
@@ -120,11 +122,14 @@
                                 <button type="button" id="tangsoluong" class="btn">+</button>
                             </div>
                         </div>
-                        <div class="col-md-5 mt-4 pr-5">
-                            <button type="button" class="btn btn-block themvaogio btn-info">Thêm vào giỏ</button>
+                        <div class="col-md-1 mt-4 text-center">
+                          <span class="traitim" class=""><i class="far fa-heart yeuthich pt-2" data-yeuthich="2"></i></span>
                         </div>
-                        <div class="col-md-5 mt-4 pr-5">
-                          <button type="button" class="btn btn-block btn-info">Mua ngay</button>
+                        <div class="col-md-4 pr-5 mt-4">
+                            <button type="button" class="btn btn-block themvaogio btn-info" data-id="2">Thêm vào giỏ</button>
+                        </div>
+                        <div class="col-md-5 pr-5 mt-4">
+                          <button type="button" id="muangay" class="btn btn-block btn-info">Mua ngay</button>
                         </div>
                     </div>
                     <div class="row mt-4">

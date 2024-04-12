@@ -13,9 +13,7 @@ $(document).ready(function(){
     var urlParams = new URLSearchParams(window.location.search);
     var sp = urlParams.get('dsyt');
     sp=sp.split(',');
-    console.log(sp.length);
     for(let i=0;i<sp.length;i++){
-        console.log(dsyt[sp[i]]);
         let data=`
         <div class="col-md-3 d-flex justify-content-center align-items-center float-left product">
                     <div class="img-thumbnail col-md-12 mt-3">
@@ -35,7 +33,6 @@ $(document).ready(function(){
                     </div>  
                 </div>
         `
-        console.log(parseInt(sp[i])+1)
         $('#myFavorite').append(data);
     }
 })
