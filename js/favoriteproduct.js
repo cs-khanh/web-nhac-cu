@@ -5,7 +5,8 @@ let sp4={img:'../img/SanPham/Guitar/dan-guitar-acoustic-taylor-bt2-mahogany-baby
 let sp5={img:'../img/SanPham/Piano/dan-piano-dien-yamaha-clp-300-clavinova-qua-su-dung-viet-music.png',ten:'Piano Yamaha CLP 300',gia:'6.000.000'};
 let sp6={img:'../img/SanPham/Piano/dan-piano-dien-yamaha-cvp-8-clavinova-qua-su-dung-viet-music.png',ten:'Piano Yamaha CVP 8 Clavinova',gia:'5.000.000'};
 let sp7={img:'../img/SanPham/Piano/dan-piano-dien-yamaha-p-95-p-series-qua-su-dung-viet-music.png',ten:'Piano Yamaha P 95',gia:'9.500.000'};
-let dsyt=[sp1,sp2,sp3,sp4,sp5,sp6,sp7];
+let sp8={img:'../img/SanPham/Guitar/dan-guitar-acoustic-yamaha-f310-f-series-viet-music.png',ten:'Đàn Guitar Yamaha F310 Series',gia:'3.900.000'}
+let dsyt=[sp1,sp2,sp3,sp4,sp5,sp6,sp7,sp8];
 $(document).ready(function(){
     $('#myFavorite').on('click', '.xoasp', function(){
         $(this).closest('.product').remove();

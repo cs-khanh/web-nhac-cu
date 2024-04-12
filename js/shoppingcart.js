@@ -5,7 +5,8 @@ let sp4={img:'../img/SanPham/Guitar/dan-guitar-acoustic-taylor-bt2-mahogany-baby
 let sp5={img:'../img/SanPham/Piano/dan-piano-dien-yamaha-clp-300-clavinova-qua-su-dung-viet-music.png',ten:'Đàn Piano điện Yamaha CLP 300 Clavinova',gia:'6.000.000'};
 let sp6={img:'../img/SanPham/Piano/dan-piano-dien-yamaha-cvp-8-clavinova-qua-su-dung-viet-music.png',ten:'Đàn Piano điện Yamaha CVP 8 Clavinova',gia:'5.000.000'};
 let sp7={img:'../img/SanPham/Piano/dan-piano-dien-yamaha-p-95-p-series-qua-su-dung-viet-music.png',ten:'Đàn Piano điện Yamaha P95 Series',gia:'9.500.000'};
-let dssp=[sp1,sp2,sp3,sp4,sp5,sp6,sp7];
+let sp8={img:'../img/SanPham/Guitar/dan-guitar-acoustic-yamaha-f310-f-series-viet-music.png',ten:'Đàn Guitar Yamaha F310 Series',gia:'3.900.000'}
+let dssp=[sp1,sp2,sp3,sp4,sp5,sp6,sp7,sp8];
 function thanhTien(row){
     let gia= row.find('.gia').text();
     gia=parseInt(gia.replace(/\./g,""));
@@ -85,6 +86,21 @@ $(document).ready(function(){
         $('#tongTien').text(new Intl.NumberFormat('vi-VN').format(tinhTongTienTatCa()) + ' ₫');
     });
     $('#tongTien').text(new Intl.NumberFormat('vi-VN').format(tinhTongTienTatCa()) + ' ₫');
-
-
+    $('#muangay').click(function(){
+        if(tinhTongTienTatCa()==0){
+            alert('Không có sản phẩm nào trong giỏ hàng!');
+        }else{
+            var sls = []; // Mảng chứa số lượng của các sản phẩm
+            $('#myTable tr').each(function() {
+                var sl = $(this).find('.soluonghientai').text(); // Lấy số lượng từ mỗi dòng
+                sls.push(sl);
+                console.log(sp, sl);
+            });
+    
+            var queryString = '?dssp=' + encodeURIComponent(sp) + '&dssl=' + encodeURIComponent(sls) +'&tongTien='+encodeURIComponent(tinhTongTienTatCa());
+            var url = 'cartpayment.html' + queryString;
+            window.open(url, '_blank');
+        }
+    });
+    
 });

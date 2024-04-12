@@ -40,9 +40,10 @@ $(document).ready(function(){
         let sl=$('#soluonghientai').text();
         dssl.push(sl);
         console.log(dssl);
-        let tongtien=tinhTongTien(sl);
+        let tongtien=0;
+        tongtien=tinhTongTien(sl);
         console.log(tongtien);
-        var queryString = '?dssp=' + encodeURIComponent(dssp) +'&dssl=' + encodeURIComponent(dssl) +'&tongTien'+encodeURIComponent(tongtien);
+        var queryString = '?dssp=' + encodeURIComponent(dssp) +'&dssl=' + encodeURIComponent(dssl) +'&tongTien='+encodeURIComponent(tongtien);
         var url = 'cartpayment.html' + queryString;
         window.open(url, '_blank');
     })
