@@ -32,3 +32,27 @@
     height: 10px;
     background-color: transparent;
 }
+#new{
+    transform: rotate(315deg);
+    display: block;
+    position: absolute;
+    margin-top: 20px;
+    z-index: 1000;
+    transition: color 0.3s ease-in-out;
+    background: linear-gradient(45deg, #ff0909, #00ffaa);
+    background-size: 200% 200%;
+    animation: gradientChange 1.5s ease-in-out infinite;
+    color: transparent;
+    -webkit-background-clip: text;
+}
+@keyframes gradientChange {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

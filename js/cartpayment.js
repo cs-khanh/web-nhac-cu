@@ -38,8 +38,8 @@ function checkName() {
        return false;
     }
 }
-let t=$('#tong').html();
 $(document).ready(function(){
+    let t=$('#tong').html();
     $('#sdt').blur(function(){
         checkPhone();
     })
