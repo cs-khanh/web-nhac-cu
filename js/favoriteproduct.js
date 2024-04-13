@@ -6,7 +6,17 @@ let sp5={img:'../img/SanPham/Piano/dan-piano-dien-yamaha-clp-300-clavinova-qua-s
 let sp6={img:'../img/SanPham/Piano/dan-piano-dien-yamaha-cvp-8-clavinova-qua-su-dung-viet-music.png',ten:'Piano Yamaha CVP 8 Clavinova',gia:'5.000.000'};
 let sp7={img:'../img/SanPham/Piano/dan-piano-dien-yamaha-p-95-p-series-qua-su-dung-viet-music.png',ten:'Piano Yamaha P 95',gia:'9.500.000'};
 let sp8={img:'../img/SanPham/Guitar/dan-guitar-acoustic-yamaha-f310-f-series-viet-music.png',ten:'Đàn Guitar Yamaha F310 Series',gia:'3.900.000'}
-let dsyt=[sp1,sp2,sp3,sp4,sp5,sp6,sp7,sp8];
+let sp9={img:'../img/SanPham/Guitar/dan-guitar-acoustic-yamaha-fg-401-qua-su-dung-viet-music.png',ten:'Đàn Guitar Acoustic Yamaha FG-401',gia:'10.500.000'}
+let sp10={img:'../img/SanPham/Guitar/dan-guitar-classic-cordoba-hauser-limited-macassar-ebony-viet-music.png',ten:'Đàn Guitar Classic Cordoba Hauser Limited Macassar Ebony',gia:'170.00.000'}
+let sp11={img:'../img/SanPham/Guitar/dan-guitar-classic-cordoba-torres-viet-music.png',ten:'Đàn Guitar Classic Cordoba Torres',gia:'150.000.000'}
+let sp12={img:'../img/SanPham/Guitar/dan-guitar-classic-yamaha-gc82s-gc-gcx-series-viet-music.png',ten:'Đàn Guitar Classic Yamaha GC82S - GC / GCX Series',gia:'275.000.000'}
+let sp13={img:'../img/SanPham/Piano/dan-organ-korg-pa600-viet-music.png',ten:'Đàn Organ Korg PA600',gia:'26.000.000'}
+let sp14={img:'../img/SanPham/Piano/dan-organ-kurtzman-sv800-viet-music.png',ten:'Đàn Organ Kurtzman SV800',gia:'17.000.000'}
+let sp15={img:'../img/SanPham/Piano/dan-piano-hybrid-grand-yamaha-c1x-sh3-silent-cx-series-viet-music.png',ten:'Grand Piano Yamaha C1X - CX Series',gia:'720.000.000'}
+let sp16={img:'../img/SanPham/Piano/grand-piano-yamaha-c5-pe-c-series-viet-music.png',ten:'Grand Piano Yamaha C5 PE - Series',gia:'890.000.000'}
+let sp17={img:'../img/SanPham/Piano/grand-piano-yamaha-cfx-premium-cf-series-viet-music_30d700f1-33b4-48ed-bbac-8055b058a6b3.png',ten:'Grand Piano Yamaha CFX Premium - CF Series',gia:'4.900.000.000'}
+
+let dsyt=[sp1,sp2,sp3,sp4,sp5,sp6,sp7,sp8,sp9,sp10,sp11,sp12,sp13,sp14,sp15,sp16,sp17];
 $(document).ready(function(){
     $('#myFavorite').on('click', '.xoasp', function(){
         $(this).closest('.product').remove();
