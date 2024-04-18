@@ -10,10 +10,11 @@ $(document).ready(function(){
     $('#dn').click(function(){
         if(kiemTraRong($('#username').val()) && kiemTraRong($('#pw').val()) ){
             var dsuser= JSON.parse(localStorage.getItem("DSuser"));
+            var flag=-1;
+            var idtk=null;
             if(dsuser!=null){
                 var username=$('#username').val();
                 var pw=$('#pw').val();
-                let flag=0,idtk=null;
                 for(let i=0;i<dsuser.length;i++){
                     if(username==dsuser[i].name){
                         if(pw==dsuser[i].pw){
