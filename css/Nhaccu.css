@@ -4,6 +4,7 @@
     letter-spacing: 5px;
     /* background-color: #343A40; */
     color: #FFF;
+    border-radius: 20px;
 }
 .traitim{
     font-size: 20px;
@@ -13,7 +14,7 @@
     background-color: #343A40;
     color: #FFF;
     margin-top: 15px;
-    border-radius: 5px;
+    border-radius: 20px;
     transition: transform 0.5s;
     font-size: 20px;
 }

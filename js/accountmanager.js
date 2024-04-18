@@ -68,6 +68,20 @@ function KiemTraPasswordNewAndPresent(){
     }
 }
 $(document).ready(function(){
+    var id=JSON.parse(localStorage.getItem("IDTK"));
+    if(id==null){
+        $('.change ').hide();
+        $('.change-success').show();
+    }else{
+        $('.change ').show();
+        $('.change-success').hide();
+        var dsuser= JSON.parse(localStorage.getItem("DSuser"));
+        $('#usernameedit,#username').val(dsuser[id].name);
+        $('.showUsername').html(dsuser[id].name);
+        $('#emailedit,#email').val(dsuser[id].email);
+        $('#sdtedit,#sdt').val(dsuser[id].sdt);
+        $('#addressedit,#address').val(dsuser[id].address);
+    }
     $('#username').blur(function(){
         KiemTraTenDN();
     })
@@ -91,24 +105,36 @@ $(document).ready(function(){
     })
     $('#changeInfo').click(function(){
         if(KiemTraTenDN() && checkEmail() && checkPhone() && kiemTraDiaChi()){
+            dsuser[id].name=$('#username').val();
+            dsuser[id].email=$('#email').val();
+            dsuser[id].sdt=$('#sdt').val();
+            dsuser[id].address=$("#address").val();
+            localStorage.setItem('DSuser',JSON.stringify(dsuser));
             alert('Cập nhật thông tin tài khoản thành công!');
-            $('.showUsername').html($('#username').val());
-            $('#usernameedit').val($('#username').val())
-            $('#emailedit').val($('#email').val());
-            $('#sdtedit').val($('#sdt').val());
-            $('#addressedit').val($("#address").val());
-            //$('#updateinfo input').val('');
+            location.reload();
         }else{
             alert('<< Bạn phải nhập đúng thông tin!>>');
         }
     })
     $('#changepw').click(function(){
-        console.log($('#pwPresent').val());
-        if(KiemTraPassword() && KiemTraXacNhanPassword() && KiemTraPasswordNewAndPresent() && $('#pwPresent').val().trim()!=""){
-            alert('Thay đổi mật khẩu thành công!');
-        $('input[type=password]').val("");
+        let pw=($('#pwPresent').val());
+        if(dsuser[id].pw==pw){
+            if(KiemTraPassword() && KiemTraXacNhanPassword() && KiemTraPasswordNewAndPresent()){
+                dsuser[id].pw=$('#pwNew').val();
+                localStorage.setItem('DSuser', JSON.stringify(dsuser));
+                alert('Thay đổi mật khẩu thành công!');
+                $('input[type=password]').val("");
+            }else{
+                alert('<< Bạn phải nhập đúng thông tin!>>');
+            }
+        }else if($('#pwPresent').val().trim()==""){
+            alert('<< Bạn cần nhập mật khẩu hiện tại >>');
         }else{
-            alert('<< Bạn phải nhập đúng thông tin!>>');
+            alert('<< Mật khẩu hiện tại sai! >>');
         }
+    })
+    $('.dangxuat').click(function(){
+        localStorage.removeItem('IDTK');
+        window.location.href='../html/login.html';
     })
 })

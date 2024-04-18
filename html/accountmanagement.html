@@ -32,7 +32,7 @@
             <div class="col-md-4">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="../html/home.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                  <a class="nav-link" href="../html/home.html"><i class="fas fa-sign-out-alt dangxuat"></i> Đăng xuất</a>
                 </li>
               </ul>
             </div>
@@ -100,11 +100,18 @@
         
         <!-- ĐÂY LÀ PHẦN NỘI DUNG  -->
         <div class="content">
-            <div class="row ml-0 mr-0">
-                <h5 class="pt-3">Xin chào <span class="text-success showUsername">user12345</span> ! </h5>
-                <h5 class="pt-3"> (Không phải <span class="text-success showUsername">user12345</span><a class="" href="../html/home.html"> Đăng xuất</a>) </h5>
+          <div class="row ml-0 mr-0 change-success">
+            <div class="col-md-12 mt-5 text-center">
+              <h3 class=" text-danger">Bạn cần phải đăng nhập để xem thông tin tài khoản!</h3>
+              <h4 class="mt-5">Đi đến <a href="../html/login.html">Đăng nhập</a></h4>
             </div>
-          <div class="row ml-0 mr-0 mt-5">
+          </div>
+            <div class="row ml-0 mr-0 change">
+                <h5 class="pt-3">Xin chào <span class="text-success showUsername"></span> ! </h5>
+                <h5 class="pt-3"> Không phải <span class="text-success showUsername"></span> </h5>
+                <button class="btn dangxuat text-danger mt-2 font-weight-bold" style="background-color: unset;"> Đăng xuất</button>
+            </div>
+          <div class="row ml-0 mr-0 mt-5 change">
             <ul class="nav nav-pills ml-3 col-md-12">
                 <li class="nav-item"><a href="#detailaccount" class="nav-link active" data-toggle="pill">Chi tiết tài khoản</a></li>
                 <li class="nav-item"><a href="#updateinfo" class="nav-link" data-toggle="pill">Cập nhật thông tin</a></li>
@@ -112,7 +119,7 @@
                 <li class="nav-item"><a href="#purchasehistory" class="nav-link" data-toggle="pill">Lịch sử mua hàng</a></li>
             </ul>
           </div>
-          <div class="tab-content col-md-6 col-sm-12 mt-3 ml-3">
+          <div class="tab-content col-md-6 col-sm-12 mt-3 ml-3 change">
             <div class="tab-pane show fade active" id="detailaccount">
                 <form action="">
                     <div class="form-group">
@@ -121,7 +128,7 @@
                                 <label for="">Tên đăng nhập</label>
                             </div>
                             <div class="col-6">
-                                <input class="form-control" type="text" name="" id="usernameedit" value="user12345" disabled>
+                                <input class="form-control" type="text" name="" id="usernameedit" disabled>
                             </div>
                         </div>
                     </div>
@@ -131,7 +138,7 @@
                                 <label for="">Email</label>
                             </div>
                             <div class="col-6">
-                                <input class="form-control" type="email" name="" id="emailedit" value="abc@gmail.com" disabled>
+                                <input class="form-control" type="email" name="" id="emailedit" disabled>
                             </div>
                         </div>
                     </div>
@@ -141,7 +148,7 @@
                                 <label for="sdt">Số điện thoại</label>
                             </div>
                             <div class="col-6">
-                                <input class="form-control" type="tel" name="" id="sdtedit" value="0333456999" disabled>
+                                <input class="form-control" type="tel" name="" id="sdtedit" disabled>
                             </div>
                         </div>
                     </div>
@@ -151,7 +158,7 @@
                                 <label for="address">Địa chỉ</label>
                             </div>
                             <div class="col-6">
-                                <input class="form-control" type="text" name="" id="addressedit" value="" disabled>
+                                <input class="form-control" type="text" name="" id="addressedit"  disabled>
                             </div>
                         </div>
                     </div>
@@ -165,7 +172,7 @@
                                 <label for="username">Tên đăng nhập</label>
                             </div>
                             <div class="col-6">
-                                <input class="form-control" type="text" name="" id="username" value="user12345">
+                                <input class="form-control" type="text" name="" id="username">
                                 <span class="text-danger" id="tbUsername">*</span>
                             </div>
                         </div>
@@ -176,7 +183,7 @@
                                 <label for="email">Email</label>
                             </div>
                             <div class="col-6">
-                                <input class="form-control" type="email" name="" id="email" value="abc@gmail.com">
+                                <input class="form-control" type="email" name="" id="email">
                                 <span class="text-danger" id="tbEmail">*</span>
                             </div>
                         </div>
@@ -187,7 +194,7 @@
                                 <label for="sdt">Số điện thoại</label>
                             </div>
                             <div class="col-6">
-                                <input class="form-control" type="tel" name="" id="sdt" value="0333456999">
+                                <input class="form-control" type="tel" name="" id="sdt">
                                 <span class="text-danger" id="tbSdt">*</span>
                             </div>
                         </div>

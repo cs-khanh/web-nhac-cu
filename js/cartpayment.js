@@ -18,7 +18,7 @@ let sp17={img:'../img/SanPham/Piano/grand-piano-yamaha-cfx-premium-cf-series-vie
 
 let dssp=[sp1,sp2,sp3,sp4,sp5,sp6,sp7,sp8,sp9,sp10,sp11,sp12,sp13,sp14,sp15,sp16,sp17];
 function checkName() {
-    let regex= /^(([A-Z]{1}[a-z]{0,6}\s{1}){1,6}[A-Z]{1}[a-z]{0,6})$|^(([A-Z]{1,7}\s{1}){1,6}[A-Z]{1,7})$/ ;
+    let regex= /^(([\p{L}\p{M}]{1}[\p{Ll}]{0,6}\s{1}){1,6}[\p{L}\p{M}]{1}[\p{Ll}]{0,6})$/u;
     let chuoi=$('#name').val();
     if (regex.test(chuoi)) { 
        $('#tbName').html('*');
@@ -49,7 +49,7 @@ function kiemTraDiaChi(){
     }
 }
 $(document).ready(function(){
-    let t=$('#tong').html();
+    let t=parseInt($('#tong').html());
     $ ("#name").blur(function(){
         checkName();
     })
@@ -59,13 +59,24 @@ $(document).ready(function(){
     $( "#address" ).blur(function(){
         kiemTraDiaChi();
     })
-    console.log(t);
+    
     $('.dathang').click(function(){
-        if(checkName()  && checkPhone() && kiemTraDiaChi() && typeof t!='undefined') {
-            window.location.href = '../html/completeorders.html';
-        }else if(checkName()==false ||checkPhone() ==false || kiemTraDiaChi()==false){
+        if(checkName()  && checkPhone() && kiemTraDiaChi() && $('#tong').html()!='') {
+            $("#myModal").modal();
+            $('#hoVaTen').val($('#name').val());
+            $('#soDienThoai').val($('#sdt').val());
+            $('#diaChi').val($('#address').val());
+            $('#thanhToan').val($('#payments').val());
+            let phuongthuc={50000:'Nhanh (Nhận hàng 2-3 ngày sau khi đặt)',80000:'Hỏa tốc (Nhận hàng 1-2 ngày sau khi đặt)'}
+            $('#vanChuyen').val(phuongthuc[$('#transport').val()]);
+            $('#tongThanhToan').val($('#tong').html());
+                $('.xacnhandathang').click(function(){
+                    window.location.href = '../html/completeorders.html';
+                })
+        }
+        else if(checkName()==false ||checkPhone() ==false || kiemTraDiaChi()==false){
             alert('Bạn phải nhập đầy đủ thông tin');
-        }else if(typeof t=='undefined'){
+        }else if($('#tong').html()==''){
             alert('Không có sản phẩm nào để thanh toán');
         }
     })
@@ -73,8 +84,10 @@ $(document).ready(function(){
     var sp = urlParams.get('dssp');
     var sl=urlParams.get('dssl');
     var tongTien=parseInt(urlParams.get('tongTien'));
-    sp=sp.split(',');
-    sl=sl.split(',');
+    if(sp!==null && sl!==null){
+        sp=sp.split(',');
+        sl=sl.split(',');
+    }
     console.log(sp,sl);
     console.log(tongTien);
     for(let i=0;i<sp.length;i++){

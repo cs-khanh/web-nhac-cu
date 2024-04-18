@@ -11,6 +11,7 @@
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
     <script src="../js/cartpayment.js"></script>
+    <script src="../js/home.js"></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -32,7 +33,7 @@
             <div class="col-md-4">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="../html/login.html"><i class="fas fa-user"></i> Hi user12345</a>
+                  <a class="nav-link" id="account-link" href=""><i class="fas fa-user" id="account"></i></a>
                 </li>
               </ul>
             </div>
@@ -180,7 +181,7 @@
               </div>
               <div class="row mb-4">
                 <div class="col-md-12 text-right pr-5">
-                  <button class="btn text-light dathang" data-toggle="modal" data-target="#myModal" type="button">Đặt hàng</button>
+                  <button class="btn text-light dathang" type="button">Đặt hàng</button>
                 </div>
               </div>
             </div>
@@ -196,14 +197,68 @@
                   <div class="modal-body">
                     <div class="form-group">
                       <div class="row">
-                        <div class="col-md-4">
-                          <label for="">Họ và tên</label>
+                        <div class="col-md-3 text-right">
+                          <label for="hoVaTen">Họ và tên</label>
                         </div>
-                        <div class="col-md-8">
-                          <input class="form-control" type="button" value="">
+                        <div class="col-md-9">
+                          <input class="form-control" id="hoVaTen" type="text" disabled>
                         </div>
                       </div>
                     </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3 text-right">
+                          <label for="soDienThoai">Số điện thoại</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input class="form-control" id="soDienThoai" type="text" disabled>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3 text-right">
+                          <label for="diaChi">Địa chỉ</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input class="form-control" id="diaChi" type="text" disabled>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3 text-right">
+                          <label for="thanhToan">Hình thức thanh toán</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input class="form-control" id="thanhToan" type="text" disabled>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3 text-right">
+                          <label for="vanChuyen">Phương thức vận chuyển</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input class="form-control" id="vanChuyen" type="text" disabled>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3 text-right">
+                          <label for="" class="font-weight-bold">Tổng thanh toán</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input class="form-control text-danger" id="tongThanhToan" type="text" disabled>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-danger xacnhandathang" type="button">Xác nhận đặt hàng</button>
+                    <button class="btn btn-muted" data-dismiss="modal" type="button">Hủy</button>
                   </div>
                 </div>
               </div>

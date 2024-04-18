@@ -19,11 +19,22 @@ let sp17={img:'../img/SanPham/Piano/grand-piano-yamaha-cfx-premium-cf-series-vie
 let dsyt=[sp1,sp2,sp3,sp4,sp5,sp6,sp7,sp8,sp9,sp10,sp11,sp12,sp13,sp14,sp15,sp16,sp17];
 $(document).ready(function(){
     $('#myFavorite').on('click', '.xoasp', function(){
+        let id = parseInt($(this).closest('.product').find('.themvaogio').data('id'))-1;
         $(this).closest('.product').remove();
+        console.log(id);
+        // Tìm vị trí của phần tử trong mảng có id tương ứng và xóa nó
+        for (let i = 0; i < sp.length; i++) {
+          if (parseInt(sp[i]) === id) {
+              sp.splice(i, 1);
+              break;
+          }
+        }
+        console.log(sp);
+        localStorage.setItem('data',JSON.stringify(sp));
     });
-    var urlParams = new URLSearchParams(window.location.search);
-    var sp = urlParams.get('dsyt');
-    sp=sp.split(',');
+    var sp=[];
+    sp= JSON.parse(localStorage.getItem("data"));
+    console.log(sp);
     for(let i=0;i<sp.length;i++){
         let data=`
         <div class="col-md-3 d-flex justify-content-center align-items-center float-left product">
@@ -45,5 +56,13 @@ $(document).ready(function(){
                 </div>
         `
         $('#myFavorite').append(data);
+    }
+    var arrYt=JSON.parse(localStorage.getItem("data"));
+    if(arrYt.length===0){
+        $('.nullFavorite').show();
+        $('#myFavorite').hide();
+    }else{
+      $('.nullFavorite').hide();
+      $('#myFavorite').show();
     }
 })

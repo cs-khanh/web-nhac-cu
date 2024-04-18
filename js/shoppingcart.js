@@ -33,9 +33,9 @@ function tinhTongTienTatCa() {
     return tongTienTatCa;
 }
 $(document).ready(function(){
-    var urlParams = new URLSearchParams(window.location.search);
-    var sp = urlParams.get('dssp');
-    sp=sp.split(',');
+    var sp=[];
+    sp= JSON.parse(localStorage.getItem("data-sanpham"));
+    console.log(sp);
     for(let i=0;i<sp.length;i++){
         let data=`
     <tr>
@@ -43,7 +43,7 @@ $(document).ready(function(){
         <img src="${dssp[sp[i]].img}" alt="" width="100px">
     </td>
     <td>
-        <h6>${dssp[sp[i]].ten}</h6>
+        <h6 class="tensanpham" data-id="${sp[i]}">${dssp[sp[i]].ten}</h6>
     </td>
     <td>
         <h6 class="gia">${dssp[sp[i]].gia} <span >&#x20AB;</span></h6>
@@ -52,7 +52,7 @@ $(document).ready(function(){
     <td>
         <div class="btn-group">
             <button type="button" class="btn giamsoluong">-</button>
-            <button type="button" class="btn soluonghientai" contenteditable='true'>1</button>
+            <button type="button" class="btn soluonghientai">1</button>
             <button type="button" class="btn tangsoluong">+</button>
         </div>
     </td>
@@ -93,26 +93,46 @@ $(document).ready(function(){
     $('.xoa').click(function(){
         let row=$(this).closest('tr');
         $('.xoasp').click(function(){
+            let id=row.find('.tensanpham').data('id');
+            for (let i = 0; i < sp.length; i++) {
+                if (parseInt(sp[i]) === id) {
+                    sp.splice(i, 1);
+                    break;
+                }
+            }
+            localStorage.setItem('data-sanpham',JSON.stringify(sp));
             row.remove();
             $('#tongTien').text(new Intl.NumberFormat('vi-VN').format(tinhTongTienTatCa()) + ' ₫');
         })
     });
     $('#tongTien').text(new Intl.NumberFormat('vi-VN').format(tinhTongTienTatCa()) + ' ₫');
     $('#muangay').click(function(){
-        if(tinhTongTienTatCa()==0){
-            alert('Không có sản phẩm nào trong giỏ hàng!');
+        var id=JSON.parse(localStorage.getItem("IDTK"));
+        if(id==null){
+            alert('<< Bạn cần phải đăng nhập để thực hiện chức năng này');
         }else{
-            var sls = []; // Mảng chứa số lượng của các sản phẩm
-            $('#myTable tr').each(function() {
-                var sl = $(this).find('.soluonghientai').text(); // Lấy số lượng từ mỗi dòng
-                sls.push(sl);
-                console.log(sp, sl);
-            });
-    
-            var queryString = '?dssp=' + encodeURIComponent(sp) + '&dssl=' + encodeURIComponent(sls) +'&tongTien='+encodeURIComponent(tinhTongTienTatCa());
-            var url = 'cartpayment.html' + queryString;
-            window.open(url, '_blank');
-        }
+            if(tinhTongTienTatCa()==0){
+                alert('Không có sản phẩm nào trong giỏ hàng!');
+            }else{
+                var sls = []; // Mảng chứa số lượng của các sản phẩm
+                $('#myTable tr').each(function() {
+                    var sl = $(this).find('.soluonghientai').text(); // Lấy số lượng từ mỗi dòng
+                    sls.push(sl);
+                    console.log(sp, sl);
+                });
+        
+                var queryString = '?dssp=' + encodeURIComponent(sp) + '&dssl=' + encodeURIComponent(sls) +'&tongTien='+encodeURIComponent(tinhTongTienTatCa());
+                var url = 'cartpayment.html' + queryString;
+                window.open(url, '_blank');
+            }
+        }   
     });
-    
+    var arrSp=JSON.parse(localStorage.getItem("data-sanpham"));
+    if(arrSp.length===0){
+        $('.nullShopping').show();
+        $('.myShopping').hide();
+    }else{
+      $('.nullShopping').hide();
+      $('.myShopping').show();
+    }
 });

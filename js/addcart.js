@@ -1,13 +1,17 @@
-
-let dssp=[];
 $(document).ready(function(){
+    let dssp=JSON.parse(localStorage.getItem('data-sanpham'));
     $('.themvaogio').click(function(){
         var productId = $(this).data('id');
+        var soluong = $(this).closest('.row').find('#soluonghientai').text();
+        console.log(soluong);
         productId=parseInt(productId)-1;
-        dssp.push(productId);
-        console.log(dssp);
-        var queryString = '?dssp=' + encodeURIComponent(dssp);
-        var url = 'shoppingcart.html' + queryString;
-        window.open(url, '_blank');
+        if(dssp.indexOf(productId)===-1){
+            dssp.push(productId);
+            localStorage.setItem("data-sanpham", JSON.stringify(dssp)); 
+            var url = 'shoppingcart.html';
+            window.open(url, '_blank');
+        }else{
+            alert('<< Sản phẩm đã có trong giỏ hàng >>');
+        }
     })
 });

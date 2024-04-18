@@ -55,6 +55,7 @@ function SubmitForm(){
         return true;
     }
 }
+let dsuser=[];
 $(document).ready(function(){
     $('#username').blur(function(){
         KiemTraTenDN();
@@ -83,6 +84,9 @@ $(document).ready(function(){
     $('#dky').click(function(){
         if(KiemTraTenDN() && KiemTraPassword() && KiemTraXacNhanPassword() && checkEmail() && checkPhone() && checked){
             alert('Đăng ký tài khoản thành công!');
+            let user={name:$('#username').val(),pw:$('#pw').val(),email:$('#email').val(),sdt:$('#sdt').val(),address:""};
+            dsuser.push(user);
+            localStorage.setItem('DSuser',JSON.stringify(dsuser));
             $('input').val('');
             $('#dieukhoan').prop('checked',false);
             window.open('login.html?');
