@@ -1,5 +1,9 @@
 $(document).ready(function(){
     let dssp=JSON.parse(localStorage.getItem('data-sanpham'));
+    if(dssp==null) {
+        dssp=[];
+    }
+
     $('.themvaogio').click(function(){
         var productId = $(this).data('id');
         var soluong = $(this).closest('.row').find('#soluonghientai').text();

@@ -35,36 +35,37 @@ function tinhTongTienTatCa() {
 $(document).ready(function(){
     var sp=[];
     sp= JSON.parse(localStorage.getItem("data-sanpham"));
-    console.log(sp);
-    for(let i=0;i<sp.length;i++){
-        let data=`
-    <tr>
-    <td>
-        <img src="${dssp[sp[i]].img}" alt="" width="100px">
-    </td>
-    <td>
-        <h6 class="tensanpham" data-id="${sp[i]}">${dssp[sp[i]].ten}</h6>
-    </td>
-    <td>
-        <h6 class="gia">${dssp[sp[i]].gia} <span >&#x20AB;</span></h6>
-        
-    </td>
-    <td>
-        <div class="btn-group">
-            <button type="button" class="btn giamsoluong">-</button>
-            <button type="button" class="btn soluonghientai">1</button>
-            <button type="button" class="btn tangsoluong">+</button>
-        </div>
-    </td>
-    <td>
-        <h6 class="thanhTien"></h6>
-    </td>
-    <td>
-        <button class="btn text-danger xoa" data-toggle="modal" data-target="#myModal" type="button"><i class="fas fa-trash"></i></button>
-    </td>
-</tr>
-    `
-        $('#myTable').append(data);
+    if(sp!=null){
+        for(let i=0;i<sp.length;i++){
+            let data=`
+        <tr>
+        <td>
+            <img src="${dssp[sp[i]].img}" alt="" width="100px">
+        </td>
+        <td>
+            <h6 class="tensanpham" data-id="${sp[i]}">${dssp[sp[i]].ten}</h6>
+        </td>
+        <td>
+            <h6 class="gia">${dssp[sp[i]].gia} <span >&#x20AB;</span></h6>
+            
+        </td>
+        <td>
+            <div class="btn-group">
+                <button type="button" class="btn giamsoluong">-</button>
+                <button type="button" class="btn soluonghientai">1</button>
+                <button type="button" class="btn tangsoluong">+</button>
+            </div>
+        </td>
+        <td>
+            <h6 class="thanhTien"></h6>
+        </td>
+        <td>
+            <button class="btn text-danger xoa" data-toggle="modal" data-target="#myModal" type="button"><i class="fas fa-trash"></i></button>
+        </td>
+    </tr>
+        `
+            $('#myTable').append(data);
+        }
     }
     $('.giamsoluong').click(function(){
         let row = $(this).closest('tr');
@@ -127,8 +128,7 @@ $(document).ready(function(){
             }
         }   
     });
-    var arrSp=JSON.parse(localStorage.getItem("data-sanpham"));
-    if(arrSp.length===0){
+    if(sp==null){
         $('.nullShopping').show();
         $('.myShopping').hide();
     }else{

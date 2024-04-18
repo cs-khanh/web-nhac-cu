@@ -1,5 +1,8 @@
 $(document).ready(function(){
   let dt=JSON.parse(localStorage.getItem('data'));
+  if(dt==null){
+    dt=[];
+  }
   console.log(dt);
     for(let i=0;i<dt.length;i++){
       console.log(parseInt(dt[i]+1));

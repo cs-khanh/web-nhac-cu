@@ -34,8 +34,8 @@ $(document).ready(function(){
     });
     var sp=[];
     sp= JSON.parse(localStorage.getItem("data"));
-    console.log(sp);
-    for(let i=0;i<sp.length;i++){
+    if(sp!=null){
+      for(let i=0;i<sp.length;i++){
         let data=`
         <div class="col-md-3 d-flex justify-content-center align-items-center float-left product">
                     <div class="img-thumbnail col-md-12 mt-3">
@@ -57,8 +57,8 @@ $(document).ready(function(){
         `
         $('#myFavorite').append(data);
     }
-    var arrYt=JSON.parse(localStorage.getItem("data"));
-    if(arrYt.length===0){
+    }
+    if(sp==null){
         $('.nullFavorite').show();
         $('#myFavorite').hide();
     }else{
