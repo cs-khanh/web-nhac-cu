@@ -58,11 +58,11 @@
                   <li class="nav-item dropdown">
                     <a href="" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown"><i class="fas fa-guitar"></i> Nhạc cụ</a>
                     <div class="dropdown-menu">
-                      <a href="" class="dropdown-item">Guitar Acoustic</a>
-                      <a href="" class="dropdown-item">Guitar Classic</a>
-                      <a href="" class="dropdown-item">Piano Electric</a>
-                      <a href="" class="dropdown-item">Piano</a>
-                      <a href="" class="dropdown-item">Organ</a>
+                      <a href="../html/GuitarAcoustic.html" class="dropdown-item">Guitar Acoustic</a>
+                      <a href="../html/GuitarClassic.html" class="dropdown-item">Guitar Classic</a>
+                      <a href="../html/PianoElectric.html" class="dropdown-item">Piano Electric</a>
+                      <a href="../html/Piano.html" class="dropdown-item">Piano</a>
+                      <a href="../html/Organ.html" class="dropdown-item">Organ</a>
                     </div>
                   </li>
                   <li class="nav-item">
@@ -180,10 +180,33 @@
               </div>
               <div class="row mb-4">
                 <div class="col-md-12 text-right pr-5">
-                  <button class="btn text-light dathang" type="button">Đặt hàng</button>
+                  <button class="btn text-light dathang" data-toggle="modal" data-target="#myModal" type="button">Đặt hàng</button>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="row">
+            <div class="modal fade" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="text-danger">Xem lại thông tin</h4>
+                    <button class="close" data-dismiss="modal" type="button">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label for="">Họ và tên</label>
+                        </div>
+                        <div class="col-md-8">
+                          <input class="form-control" type="button" value="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
         <!-- ĐÂY LÀ PHẦN FOOTER DÙNG CHUNG CHO CÁC TRANG -->

@@ -60,7 +60,7 @@ $(document).ready(function(){
         <h6 class="thanhTien"></h6>
     </td>
     <td>
-        <button class="btn text-danger xoasp" type="button"><i class="fas fa-trash"></i></button>
+        <button class="btn text-danger xoa" data-toggle="modal" data-target="#myModal" type="button"><i class="fas fa-trash"></i></button>
     </td>
 </tr>
     `
@@ -90,10 +90,12 @@ $(document).ready(function(){
         let row = $(this).closest('tr');
         $(this).text(thanhTien(row) + ' ₫');
     });
-    $('.xoasp').click(function(){
+    $('.xoa').click(function(){
         let row=$(this).closest('tr');
-        row.remove();
-        $('#tongTien').text(new Intl.NumberFormat('vi-VN').format(tinhTongTienTatCa()) + ' ₫');
+        $('.xoasp').click(function(){
+            row.remove();
+            $('#tongTien').text(new Intl.NumberFormat('vi-VN').format(tinhTongTienTatCa()) + ' ₫');
+        })
     });
     $('#tongTien').text(new Intl.NumberFormat('vi-VN').format(tinhTongTienTatCa()) + ' ₫');
     $('#muangay').click(function(){

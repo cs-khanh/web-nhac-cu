@@ -1,0 +1,36 @@
+.nhaccu{
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    /* background-color: #343A40; */
+    color: #FFF;
+}
+.traitim{
+    font-size: 20px;
+    cursor: pointer;
+}
+.list a{
+    background-color: #343A40;
+    color: #FFF;
+    margin-top: 15px;
+    border-radius: 5px;
+    transition: transform 0.5s;
+    font-size: 20px;
+}
+.list a:hover{
+    transform: scale(1.05);
+}
+.img-thumbnail{
+    box-shadow: 0 0px 8px rgba(89, 89, 89, 0.5);
+    overflow: hidden;
+}
+.title-product{
+    position: relative;
+    z-index: 1; /* Đặt vị trí của test để nó không bị đè lên bởi ảnh */
+}
+.img-thumbnail img{
+    transition: transform 0.3s ease-in-out;
+}
+.img-thumbnail img:hover{
+    transform: scale(1.1);
+}

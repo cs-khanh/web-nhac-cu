@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập</title>
+    <title>Piano Electric</title>
     <link rel="stylesheet" href="../bootstrap-4.0.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/Nhaccu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../js/addcart.js"></script>
+    <script src="../js/addfavorite.js"></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -31,7 +33,7 @@
             <div class="col-md-4">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="../html/regester.html"><i class="fas fa-user-plus"></i> Đăng ký</a>
+                  <a class="nav-link" href="../html/login.html"><i class="fas fa-user"></i> Hi user12345</a>
                 </li>
               </ul>
             </div>
@@ -84,58 +86,93 @@
             </div>
           </div>
         </div>
+        <!-- Banner -->
         <div class="banner">
           <div class="row">
             <div class="col-md-6 pl-5 content-banner1">
-              <h2 class="text-light">ĐĂNG NHẬP</h2>
+              <h2 class="text-light">Piano Electric</h2>
             </div>
             <div class="col-md-6 pl-5 content-banner2">
               <a href="../html/home.html" class="home-title">Trang chủ </a>
               <span class="text-light ml-1"> /</span>
-              <a href="" class="text-light ml-1">Đăng nhập</a>
+              <a href="../html/PianoElectric.html" class="text-light ml-1">Piano Electric</a>
             </div>
           </div>
         </div>
-        
         <!-- ĐÂY LÀ PHẦN NỘI DUNG  -->
         <div class="content">
-          <div class="row">
-            <form action="" class="col-md-12">
-              <div class="col-md-6 float-left form-login">
-                <div class="form-group">
-                  <label for="username" class="font-weight-bold">Tên đăng nhập</label>
-                  <input type="text" class="form-control" id="username">
+            <div class="row ml-0 mr-0 mb-5">
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-block btn-info mt-4 text-center nhaccu">NHẠC CỤ</button>
+                    <nav class="">
+                        <ul class="nav flex-column list">
+                            <a class="nav-link mt-3" href="../html/GuitarAcoustic.html"><li class="nav-item">Guitar Acoustic</li></a>
+                            <a class="nav-link" href="../html/GuitarClassic.html" ><li class="nav-item">Guitar Classic</li></a>
+                            <a class="nav-link" href="../html/PianoElectric.html" style="background-color: #FF7000;"><li class="nav-item">Piano Electric</li></a>
+                            <a class="nav-link" href="../html/Piano.html"><li class="nav-item">Piano</li></a>
+                            <a class="nav-link" href="../html/Organ.html"><li class="nav-item">Organ</li></a>
+                        </ul>
+                    </nav>
                 </div>
-                <div class="form-group">
-                  <label for="pw" class="font-weight-bold">Mật khẩu</label>
-                  <input type="password" class="form-control" id="pw">
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-4 d-flex justify-content-center align-items-center float-left thumbnail-shadow">
+                            <div class="img-thumbnail col-md-12 mt-3">
+                              <a href="../html/PD_YAMAHA_CLP_300.html"><img class="col-md-12" src="../img/SanPham/Piano/dan-piano-dien-yamaha-clp-300-clavinova-qua-su-dung-viet-music.png" alt="" ></a>
+                              <div class="title-product">
+                                <a class="nav-link pt-0 text-center text-info" href="../html/PD_YAMAHA_CLP_300.html">Piano Yamaha CLP 300</a>
+                                <p class="text-center font-weight-bold">6.000.000</p>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-10">
+                                  <button class="btn btn-block text-light themvaogio mb-3" data-id="5" type="button">Thêm vào giỏ</button>
+                                </div>
+                                <div class="col-md-2 pl-0 pt-1 text-center">
+                                  <span class="traitim" class="ml-0"><i class="far fa-heart yeuthich" data-yeuthich="5"></i></span>
+                                </div>
+                              </div>
+                            </div>  
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-center align-items-center float-left thumbnail-shadow">
+                            <div class="img-thumbnail col-md-12 mt-3">
+                              <a href="../html/PD_YAMAHA_CVP8.html"><img class="col-md-12" src="../img/SanPham/Piano/dan-piano-dien-yamaha-cvp-8-clavinova-qua-su-dung-viet-music.png" alt="" ></a>
+                              <div class="title-product">
+                                <a class="nav-link pt-0 text-center text-info" href="../html/PD_YAMAHA_CVP8.html">Piano Yamha CVP 8</a>
+                                <p class="text-center font-weight-bold">5.000.000</p>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-10">
+                                  <button class="btn btn-block text-light themvaogio mb-3" data-id="6" type="button">Thêm vào giỏ</button>
+                                </div>
+                                <div class="col-md-2 pl-0 pt-1 text-center">
+                                  <span class="traitim" class="ml-0"><i class="far fa-heart yeuthich" data-yeuthich="6"></i></span>
+                                </div>
+                              </div>
+                            </div>  
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-center align-items-center  float-left">
+                            <div class="img-thumbnail col-md-12 mt-3">
+                              <a href="../html/PD_YAMAHA_P95.html"><img class="col-md-12" src="../img/SanPham/Piano/dan-piano-dien-yamaha-p-95-p-series-qua-su-dung-viet-music.png" alt="" ></a>
+                              <div class="title-product">
+                                <a class="nav-link pt-0 text-center text-info" href="../html/PD_YAMAHA_P95.html">Piano Yamaha P95</a>
+                                <p class="text-center font-weight-bold">9.500.000</p>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-10">
+                                  <button class="btn btn-block text-light themvaogio mb-3" data-id="7" type="button">Thêm vào giỏ</button>
+                                </div>
+                                <div class="col-md-2 pl-0 pt-1 text-center">
+                                  <span class="traitim" class="ml-0"><i class="far fa-heart yeuthich" data-yeuthich="7"></i></span>
+                                </div>
+                              </div>
+                            </div>  
+                        </div>
+                    </div>
+                    
+                    
                 </div>
-                <a class="nav-link text-primary pl-0 col-md-4" href="">Quên mật khẩu?</a>
-              </div>
-              <div class="col-md-5 float-left">
-                <a href="../html/home.html"><button id="dn" type="button" class="btn btn-info btn-block">Đăng nhập</button></a>
-                <p>Bạn chưa có tài khoản ?</p>
-                <a href="../html/regester.html"><button id="dk" type="button" class="btn btn-primary btn-block">Đăng ký</button></a>
-              </div>
-            </form>
-          </div>
-        </div>
-        <!-- Đây là aside chung cho  các trang -->
-        <div class="aside">
-          <div class="row mt-5 mb-5">
-            <div class="col-md-3">
-              <a href="" class="nav-link aside-text text-center"><i class="fab fa-facebook"></i> FACEBOOK</a>
             </div>
-            <div class="col-md-3">
-              <a href="" class="nav-link aside-text text-center"><i class="fab fa-twitter"></i> TWITTER</a>
-            </div>
-            <div class="col-md-3">
-              <a href="" class="nav-link aside-text text-center"><i class="fab fa-google"></i> GOOGLE+</a>
-            </div>
-            <div class="col-md-3">
-              <a href="" class="nav-link aside-text text-center"><i class="fab fa-pinterest"></i> PINTEREST</a>
-            </div>
-          </div>
+
         </div>
         <!-- ĐÂY LÀ PHẦN FOOTER DÙNG CHUNG CHO CÁC TRANG -->
         <div class="footer bg-dark">

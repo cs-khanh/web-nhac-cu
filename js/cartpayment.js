@@ -17,6 +17,17 @@ let sp16={img:'../img/SanPham/Piano/grand-piano-yamaha-c5-pe-c-series-viet-music
 let sp17={img:'../img/SanPham/Piano/grand-piano-yamaha-cfx-premium-cf-series-viet-music_30d700f1-33b4-48ed-bbac-8055b058a6b3.png',ten:'Grand Piano Yamaha CFX Premium - CF Series',gia:'4.900.000.000'}
 
 let dssp=[sp1,sp2,sp3,sp4,sp5,sp6,sp7,sp8,sp9,sp10,sp11,sp12,sp13,sp14,sp15,sp16,sp17];
+function checkName() {
+    let regex= /^(([A-Z]{1}[a-z]{0,6}\s{1}){1,6}[A-Z]{1}[a-z]{0,6})$|^(([A-Z]{1,7}\s{1}){1,6}[A-Z]{1,7})$/ ;
+    let chuoi=$('#name').val();
+    if (regex.test(chuoi)) { 
+       $('#tbName').html('*');
+       return true;
+    }else{
+        $('#tbName').html('Kí tự đầu mỗi chữ viết hoa hoặc viết hoa toàn bộ ');
+       return false;
+    }
+}
 function checkPhone(){
     let regex=/^0[2-9]{1}[0-9]{8}$/;
     if(regex.test(document.getElementById('sdt').value.trim())==false){
@@ -37,33 +48,22 @@ function kiemTraDiaChi(){
         return true;
     }
 }
-function checkName() {
-    let regex= /^(([A-Z]{1}[a-z]{0,6}\s{1}){1,6}[A-Z]{1}[a-z]{0,6})$|^(([A-Z]{1,7}\s{1}){1,6}[A-Z]{1,7})$/ ;
-    let chuoi=$('#name').val();
-    if (regex.test(chuoi)) { 
-       $('#tbName').html('*');
-       return true;
-    }else{
-        $('#tbName').html('Kí tự đầu mỗi chữ viết hoa hoặc viết hoa toàn bộ ');
-       return false;
-    }
-}
 $(document).ready(function(){
     let t=$('#tong').html();
+    $ ("#name").blur(function(){
+        checkName();
+    })
     $('#sdt').blur(function(){
         checkPhone();
     })
     $( "#address" ).blur(function(){
         kiemTraDiaChi();
     })
-    $ ("#name").blur(function(){
-        checkName();
-    })
     console.log(t);
     $('.dathang').click(function(){
-        if(checkPhone() &&  checkName() && kiemTraDiaChi() && typeof t!='undefined') {
+        if(checkName()  && checkPhone() && kiemTraDiaChi() && typeof t!='undefined') {
             window.location.href = '../html/completeorders.html';
-        }else if(checkPhone() ==false || checkName()==false || kiemTraDiaChi()==false){
+        }else if(checkName()==false ||checkPhone() ==false || kiemTraDiaChi()==false){
             alert('Bạn phải nhập đầy đủ thông tin');
         }else if(typeof t=='undefined'){
             alert('Không có sản phẩm nào để thanh toán');

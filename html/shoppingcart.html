@@ -58,11 +58,11 @@
                   <li class="nav-item dropdown">
                     <a href="" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown"><i class="fas fa-guitar"></i> Nhạc cụ</a>
                     <div class="dropdown-menu">
-                      <a href="" class="dropdown-item">Guitar Acoustic</a>
-                      <a href="" class="dropdown-item">Guitar Classic</a>
-                      <a href="" class="dropdown-item">Piano Electric</a>
-                      <a href="" class="dropdown-item">Piano</a>
-                      <a href="" class="dropdown-item">Organ</a>
+                      <a href="../html/GuitarAcoustic.html" class="dropdown-item">Guitar Acoustic</a>
+                      <a href="../html/GuitarClassic.html" class="dropdown-item">Guitar Classic</a>
+                      <a href="../html/PianoElectric.html" class="dropdown-item">Piano Electric</a>
+                      <a href="../html/Piano.html" class="dropdown-item">Piano</a>
+                      <a href="../html/Organ.html" class="dropdown-item">Organ</a>
                     </div>
                   </li>
                   <li class="nav-item">
@@ -134,10 +134,10 @@
                                     <h6 class="thanhTien"></h6>
                                 </td>
                                 <td>
-                                    <button class="btn text-danger xoasp" type="button"><i class="fas fa-trash"></i></button>
+                                    <button class="btn text-danger" data-toggle="modal" data-target="#myModal" type="button"><i class="fas fa-trash"></i></button>
                                 </td>
-                            </tr>
-                            <tr>
+                            </tr> -->
+                            <!-- <tr>
                                 <td>
                                     <img src="../img/SanPham/Guitar/dan-guitar-acoustic-taylor-bt1-baby-taylor-wbag-viet-music.png" alt="" width="100px">
                                 </td>
@@ -191,6 +191,24 @@
                     </table>
 
                 </div>
+            </div>
+            <div class="row">
+              <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button class="close" data-dismiss="modal" type="button">&times;</button>
+                      <h5 class="mb-3">Bạn có muốn xóa sản phẩm này không?</h5>
+                      <div class="row ml-0 mr-0 d-flex justify-content-center">
+                        <div class="col-md-6">
+                          <button class="btn btn-danger xoasp" data-dismiss="modal" type="button">Có</button>
+                          <button class="btn btn-info ml-3" data-dismiss="modal" type="button">Không</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
