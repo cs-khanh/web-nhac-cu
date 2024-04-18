@@ -58,11 +58,16 @@ $(document).ready(function(){
         $('#myFavorite').append(data);
     }
     }
-    if(sp==null){
+    if(sp!=null){
+      if(sp.length===0){
         $('.nullFavorite').show();
         $('#myFavorite').hide();
+      }else{
+        $('.nullFavorite').hide();
+        $('#myFavorite').show();
+      }
     }else{
-      $('.nullFavorite').hide();
-      $('#myFavorite').show();
+      $('.nullFavorite').show();
+      $('#myFavorite').hide();
     }
 })

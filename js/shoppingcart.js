@@ -128,11 +128,16 @@ $(document).ready(function(){
             }
         }   
     });
-    if(sp==null){
+    if(sp!=null){
+        if(sp.length===0){
+          $('.nullShopping').show();
+          $('.myShopping').hide();
+        }else{
+          $('.nullShopping').hide();
+          $('.myShopping').show();
+        }
+      }else{
         $('.nullShopping').show();
         $('.myShopping').hide();
-    }else{
-      $('.nullShopping').hide();
-      $('.myShopping').show();
-    }
+      }
 });
