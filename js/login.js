@@ -7,6 +7,7 @@ function kiemTraRong(str){
     }
 }
 $(document).ready(function(){
+    var flag=-1;
     $('#dn').click(function(){
         var flag=-1;
         if(kiemTraRong($('#username').val()) && kiemTraRong($('#pw').val()) ){
