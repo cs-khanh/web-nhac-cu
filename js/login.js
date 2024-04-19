@@ -8,9 +8,9 @@ function kiemTraRong(str){
 }
 $(document).ready(function(){
     $('#dn').click(function(){
+        var flag=-1;
         if(kiemTraRong($('#username').val()) && kiemTraRong($('#pw').val()) ){
             var dsuser= JSON.parse(localStorage.getItem("DSuser"));
-            var flag=-1;
             var idtk=null;
             if(dsuser!=null){
                 var username=$('#username').val();
