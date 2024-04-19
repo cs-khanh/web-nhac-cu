@@ -59,26 +59,32 @@ $(document).ready(function(){
     $( "#address" ).blur(function(){
         kiemTraDiaChi();
     })
-    
+    var id=JSON.parse(localStorage.getItem("IDTK"));
     $('.dathang').click(function(){
-        if(checkName()  && checkPhone() && kiemTraDiaChi() && $('#tong').html()!='') {
-            $("#myModal").modal();
-            $('#hoVaTen').val($('#name').val());
-            $('#soDienThoai').val($('#sdt').val());
-            $('#diaChi').val($('#address').val());
-            $('#thanhToan').val($('#payments').val());
-            let phuongthuc={50000:'Nhanh (Nhận hàng 2-3 ngày sau khi đặt)',80000:'Hỏa tốc (Nhận hàng 1-2 ngày sau khi đặt)'}
-            $('#vanChuyen').val(phuongthuc[$('#transport').val()]);
-            $('#tongThanhToan').val($('#tong').html());
-                $('.xacnhandathang').click(function(){
-                    window.location.href = '../html/completeorders.html';
-                })
+        if(id==null){
+            alert('<< Bạn cần đăng nhập để thực hiện đặt hàng. >>');
+            window.location.href='../html/login.html';
+        }else{
+            if(checkName()  && checkPhone() && kiemTraDiaChi() && $('#tong').html()!='') {
+                $("#myModal").modal();
+                $('#hoVaTen').val($('#name').val());
+                $('#soDienThoai').val($('#sdt').val());
+                $('#diaChi').val($('#address').val());
+                $('#thanhToan').val($('#payments').val());
+                let phuongthuc={50000:'Nhanh (Nhận hàng 2-3 ngày sau khi đặt)',80000:'Hỏa tốc (Nhận hàng 1-2 ngày sau khi đặt)'}
+                $('#vanChuyen').val(phuongthuc[$('#transport').val()]);
+                $('#tongThanhToan').val($('#tong').html());
+                    $('.xacnhandathang').click(function(){
+                        window.location.href = '../html/completeorders.html';
+                    })
+            }
+            else if(checkName()==false ||checkPhone() ==false || kiemTraDiaChi()==false){
+                alert('Bạn phải nhập đầy đủ thông tin');
+            }else if($('#tong').html()==''){
+                alert('Không có sản phẩm nào để thanh toán');
+            }
         }
-        else if(checkName()==false ||checkPhone() ==false || kiemTraDiaChi()==false){
-            alert('Bạn phải nhập đầy đủ thông tin');
-        }else if($('#tong').html()==''){
-            alert('Không có sản phẩm nào để thanh toán');
-        }
+        
     })
     var urlParams=new URLSearchParams(window.location.search);
     var sp = urlParams.get('dssp');
