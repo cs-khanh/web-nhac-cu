@@ -55,8 +55,19 @@ function SubmitForm(){
         return true;
     }
 }
-let dsuser=[];
+function checkUserNameTrung(dsuser){
+    for(let i=0;i<dsuser.length;i++){
+        if(($('#username').val())===dsuser[i].name){
+            return false;
+        }
+    }
+    return true;
+}
 $(document).ready(function(){
+    var dsuser= JSON.parse(localStorage.getItem("DSuser"));
+    if(dsuser==null){
+        dsuser=[];
+    }
     $('#username').blur(function(){
         KiemTraTenDN();
     })
@@ -83,13 +94,17 @@ $(document).ready(function(){
     })
     $('#dky').click(function(){
         if(KiemTraTenDN() && KiemTraPassword() && KiemTraXacNhanPassword() && checkEmail() && checkPhone() && checked){
-            alert('Đăng ký tài khoản thành công!');
-            let user={name:$('#username').val(),pw:$('#pw').val(),email:$('#email').val(),sdt:$('#sdt').val(),address:""};
-            dsuser.push(user);
-            localStorage.setItem('DSuser',JSON.stringify(dsuser));
-            $('input').val('');
-            $('#dieukhoan').prop('checked',false);
-            window.open('login.html?');
+            if(checkUserNameTrung(dsuser)){
+                alert('Đăng ký tài khoản thành công!');
+                let user={name:$('#username').val(),pw:$('#pw').val(),email:$('#email').val(),sdt:$('#sdt').val(),address:""};
+                dsuser.push(user);
+                localStorage.setItem('DSuser',JSON.stringify(dsuser));
+                $('input').val('');
+                $('#dieukhoan').prop('checked',false);
+                window.open('login.html?');
+            }else{
+                alert('<< Tên tài khoản đã tồn tại!!! >>');
+            }
         }else{
             alert('Bạn phải nhập đúng thông tin và xác nhận điều khoản!');
         }

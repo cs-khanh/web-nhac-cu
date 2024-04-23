@@ -7,7 +7,6 @@ function kiemTraRong(str){
     }
 }
 $(document).ready(function(){
-    var flag=-1;
     $('#dn').click(function(){
         var flag=-1;
         if(kiemTraRong($('#username').val()) && kiemTraRong($('#pw').val()) ){
@@ -17,8 +16,8 @@ $(document).ready(function(){
                 var username=$('#username').val();
                 var pw=$('#pw').val();
                 for(let i=0;i<dsuser.length;i++){
-                    if(username==dsuser[i].name){
-                        if(pw==dsuser[i].pw){
+                    if(username===dsuser[i].name){
+                        if(pw===dsuser[i].pw){
                             flag=1;
                             idtk=i;
                             break;
@@ -26,12 +25,12 @@ $(document).ready(function(){
                             flag=2;
                             break;
                         }
+                    }else{
+                        flag=0;
                     }
                 }
-            }else{
-                flag=0;
             }
-            if(flag==0){
+            if(flag==0 || dsuser==null){
                 alert('<< Tài khoản không tồn tại!!! >>');
             }else if(flag==1){
                 localStorage.setItem('IDTK',JSON.stringify(idtk));

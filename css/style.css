@@ -18,9 +18,14 @@ a{
 }
 .content-banner1{
     padding-top: 3.5%;
+    z-index: 100;
+    text-shadow: 2px 2px 10px rgb(132, 56, 56,1);
 }
 .content-banner2{
     padding-top: 4.5%;
+    font-size: 18px;
+    text-shadow: 0px 0px 10px rgb(132, 56, 56,1);
+    font-weight: 600;
 }
 .content-banner2 a{
     text-decoration: none;
@@ -42,4 +47,10 @@ hr{
 .themvaogio{
     background-color: #FF7000;
     border: none;
+}
+#collapse2{
+    margin-left: -50px;
+}
+#clp1{
+    margin-left: -10px;
 }
