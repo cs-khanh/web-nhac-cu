@@ -47,10 +47,17 @@ hr{
 .themvaogio{
     background-color: #FF7000;
     border: none;
+    font-weight: 600;
 }
 #collapse2{
     margin-left: -50px;
 }
 #clp1{
     margin-left: -10px;
+}
+.header ul li a{
+    font-weight: 600;
+}
+.title-product a{
+    font-weight: 600;
 }

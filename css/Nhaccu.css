@@ -35,3 +35,6 @@
 .img-thumbnail img:hover{
     transform: scale(1.1);
 }
+.content nav ul a li{
+    font-weight: 600;
+}

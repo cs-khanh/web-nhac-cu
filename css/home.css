@@ -9,13 +9,21 @@
     background-color: #FF7000;
 }
 #tiltle-sp{
-    font-size: 24px;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#spnoibat{
+    font-size: 26px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .img-thumbnail{
     box-shadow: 0 0px 8px rgba(89, 89, 89, 0.5);
     overflow: hidden;
 }
 .title-product{
+    font-weight: 600;
     position: relative;
     z-index: 1; /* Đặt vị trí của test để nó không bị đè lên bởi ảnh */
 }
@@ -24,6 +32,10 @@
 }
 .img-thumbnail img:hover{
     transform: scale(1.1);
+}
+.carousel-caption h3,.carousel-caption p{
+    font-weight: bold;
+    text-shadow: 0px 0px 15px rgb(48, 15, 15);
 }
 .carousel-indicators li {
     border-radius: 50%;
